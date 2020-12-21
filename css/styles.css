@@ -1,0 +1,52 @@
+.is-dark-red {
+  background: #84152d;
+}
+
+.btn{
+  color:#FFD200;
+  background: #84152d;
+  padding:4vh 20px;
+  font-size:2vh;
+  text-decoration:none;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  position: relative;
+  display:inline-block;
+  line-height: 1.1;
+}
+
+.btn:hover{
+  border:none;
+  background:#FFD200;
+  color:#84152d;
+}
+
+.navbar-custom {
+  background: #84152d;
+  width: 100vw;
+  height: 10vh;
+  position: relative;
+  margin: auto;
+}
+
+.navbar-buttons {
+  height: 100%;
+  width: 40%;
+  justify-content: center;
+}
+
+.navbar-logo {
+  text-align: center;
+  width: 20%;
+  height: 100%;
+  float: left;
+  color: #FFD200;
+}
+
+#nav-btn-l {
+  float: left;
+}
+
+#nav-btn-r {
+  float: right;
+}
