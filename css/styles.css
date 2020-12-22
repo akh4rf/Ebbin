@@ -1,47 +1,60 @@
-.is-dark-red {
-  background: #84152d;
-}
+/* OBJECT CLASSES */
 
-.btn{
-  color:#FFD200;
-  background: #84152d;
-  padding:4vh 20px;
-  font-size:2vh;
-  text-decoration:none;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  position: relative;
-  display:inline-block;
-  line-height: 1.1;
-}
-
-.btn:hover{
-  border:none;
-  background:#FFD200;
-  color:#84152d;
-}
-
+/* This is the overall navbar wrapper*/
 .navbar-custom {
-  background: #84152d;
-  width: 100vw;
-  height: 10vh;
   position: relative;
   margin: auto;
+  height: 10vh;
+  width: 100%;
+
+  font-size: 0;
 }
 
+/* Section of the navbar where buttons go */
 .navbar-buttons {
   height: 100%;
   width: 40%;
+
   justify-content: center;
 }
 
+/* Section of the navbar where logo goes */
 .navbar-logo {
-  text-align: center;
-  width: 20%;
   height: 100%;
+  width: 20%;
+  padding: 4vh 1vw;
   float: left;
-  color: #FFD200;
+
+  font-size: 2vh;
+  text-align: center;
+  line-height: 1.1;
+  font-weight: 900;
 }
+
+/* Buttons */
+.btn{
+  height: 100%;
+  width: calc(100%/3);
+  padding:4vh 1vw;
+  display:inline-block;
+
+  font-size:2vh;
+  letter-spacing: 0.2vw;
+  text-align: center;
+  text-transform:uppercase;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+/* EFFECTS */
+
+.btn.bg-is-dark-red:hover{
+  border:none;
+  background:#FFD200 !important;
+  color:#84152d !important;
+}
+
+/* SPECIFIC OBJECTS */
 
 #nav-btn-l {
   float: left;
@@ -49,4 +62,22 @@
 
 #nav-btn-r {
   float: right;
+}
+
+/* HELPERS */
+
+.bg-is-dark-red {
+  background: #84152d !important;
+}
+
+.bg-is-yellow {
+  background: #FFD200 !important;
+}
+
+.font-is-dark-red {
+  color: #84152d !important;
+}
+
+.font-is-yellow {
+  color: #FFD200 !important;
 }
