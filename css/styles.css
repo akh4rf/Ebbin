@@ -8,6 +8,8 @@
   width: 100%;
 
   font-size: 0;
+
+  background: #84152D !important;
 }
 
 /* Section of the navbar where buttons go */
@@ -29,14 +31,23 @@
   text-align: center;
   line-height: 1.1;
   font-weight: 900;
+
+  background: #84152D !important;
+  color: #FFD200 !important;
 }
 
 /* Buttons */
-.btn{
+.nav-btn-main {
   height: 100%;
   width: calc(100%/3);
-  padding:4vh 1vw;
   display:inline-block;
+  position: relative;
+}
+
+a.main-click {
+  height: 100%;
+  width: 100%;
+  padding:4vh 1vw;
 
   font-size:2vh;
   letter-spacing: 0.2vw;
@@ -44,14 +55,30 @@
   text-transform:uppercase;
   line-height: 1.1;
   font-weight: 900;
+
+  background:#84152D;
+  color: #FFD200;
+
+  display: inline-block;
 }
 
-/* EFFECTS */
-
-.btn.bg-is-dark-red:hover{
+.nav-btn-main:hover a {
   border:none;
   background:#FFD200 !important;
-  color:#84152d !important;
+  color:#84152D !important;
+}
+
+.nav-btn-main ul {
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  margin-top: 10vh;
+  left: 0;
+}
+
+.nav-btn-main ul li {
+  display: inline-block;
+  width: 100%;
 }
 
 /* SPECIFIC OBJECTS */
@@ -67,7 +94,7 @@
 /* HELPERS */
 
 .bg-is-dark-red {
-  background: #84152d !important;
+  background: #84152D !important;
 }
 
 .bg-is-yellow {
@@ -75,7 +102,7 @@
 }
 
 .font-is-dark-red {
-  color: #84152d !important;
+  color: #84152D !important;
 }
 
 .font-is-yellow {
