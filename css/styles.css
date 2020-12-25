@@ -1,26 +1,66 @@
+/* Base Settings */
+
+/* HTML Tag */
+html {
+    /* Includes padding & border in width/height */
+    box-sizing: border-box;
+}
+
+/* Body Tag */
+body {
+  /* Sets font family of document */
+  font-family: 'Montserrat', sans-serif;
+  /* Eliminates weird whitespace */
+  font-size: 0;
+}
+
+/* Nav Tag */
+nav {
+  /* Allows setting dimensions, but no inline.    */
+  /* This is OK because only 1 bar in nav object. */
+  display: block;
+}
+
+/* Anchor Tag */
+a {
+  /* Turn cursor into pointer */
+  cursor: pointer;
+}
+
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+    /* Initial margin/padding of all of these elements is 0 */
+    margin: 0;
+    padding: 0;
+}
+
+/* IMG Tag nested in .image class div */
+.image img {
+    display: block;
+    width: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+
 /* OBJECT CLASSES */
 
-/* This is the overall navbar wrapper*/
+/* Top Navbar */
+  /* Overall navbar wrapper */
 .navbar-custom {
-  position: relative;
-  margin: auto;
   height: 10vh;
   width: 100%;
 
-  font-size: 0;
-
   background: #84152D !important;
 }
-
-/* Section of the navbar where buttons go */
+  /* Section of the navbar where buttons go */
 .navbar-buttons {
   height: 100%;
   width: 40%;
-
-  justify-content: center;
 }
-
-/* Section of the navbar where logo goes */
+  /* Section of the navbar where logo goes */
 .navbar-logo {
   height: 100%;
   width: 20%;
@@ -35,24 +75,24 @@
   background: #84152D !important;
   color: #FFD200 !important;
 }
-
-/* Buttons */
+  /* Navbar Buttons */
 .nav-btn-main {
   height: 100%;
   width: calc(100%/3);
-  display:inline-block;
+  display: inline-block;
   position: relative;
 }
-
-a.main-click {
+  /* Makes buttons clickable */
+a.main-click, a.drop-click {
   height: 100%;
   width: 100%;
-  padding:4vh 1vw;
+  padding: 4vh 1vw;
 
-  font-size:2vh;
+  font-size: 2vh;
   letter-spacing: 0.2vw;
   text-align: center;
-  text-transform:uppercase;
+  text-transform: uppercase;
+  text-decoration: none;
   line-height: 1.1;
   font-weight: 900;
 
@@ -61,50 +101,142 @@ a.main-click {
 
   display: inline-block;
 }
-
-.nav-btn-main:hover a {
-  border:none;
-  background:#FFD200 !important;
-  color:#84152D !important;
+  /* Changes color of buttons when hovered over */
+.nav-btn-main:hover a.main-click,
+.nav-btn-drop:hover a.drop-click {
+  background: #FFD200 !important;
+  color: #84152D !important;
 }
-
+  /* Nav dropdowns hidden by default */
 .nav-btn-main ul {
-  display: inline-block;
+  display: none;
+}
+  /* Nav dropdowns shown when hovered over */
+.nav-btn-main:hover ul {
   width: 100%;
-  position: absolute;
+
   margin-top: 10vh;
   left: 0;
+
+  display: inline-block;
+  position: absolute;
+}
+  /* Buttons within nav dropdowns */
+.nav-btn-drop {
+  width: 100%;
+  /* We want this display setting for the legislation dropdown */
+  display: inline-block;
 }
 
-.nav-btn-main ul li {
-  display: inline-block;
+/* Footer */
+  /* Overall footer wrapper */
+.footer-custom {
   width: 100%;
+
+  padding: 0vh 5vw 5vh 5vw;
+
+  background: #84152D !important;
+  color: #FFD200;
 }
+  /* Footer content wrapper */
+.footer-content {
+  height: 25vh;
+}
+  /* Nav columns within footer */
+.footer-column {
+  height: 20vh;
+  width: 25%;
+
+  margin-top: 4vh;
+  padding: 2vh;
+  float: left;
+
+  display: inline-block;
+  text-align: center;
+}
+  /* Column title text */
+.footer-column h1 {
+  font-size: 3vh;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+  /* Column clickable links */
+.footer-column a {
+  height: 2vh;
+  width: 100%;
+
+  text-transform: uppercase;
+  margin-block-start: 1vh;
+  display: inline-block;
+  text-decoration: none;
+  color: #FFD200;
+}
+  /* Legislation column links */
+#footer-legis a {
+  width: 25% !important;
+}
+  /* Column link text */
+.footer-column a h2 {
+  font-size: 2vh;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+  /* Change footer settings when viewport width <= 894px */
+@media screen and (max-width: 894px) {
+  .footer-content {
+    height: 45vh !important;
+  }
+  .footer-column {
+    width: 100%;
+  }
+  #footer-legis a {
+    width: 10% !important;
+  }
+  #footer-info, #footer-news, #footer-about {
+    width: calc(100%/3);
+  }
+}
+
+/* Body div */
+.main-body {
+  width: 100%;
+  height: 100vh;
+}
+
+
 
 /* SPECIFIC OBJECTS */
 
+  /* Left navbar buttons */
 #nav-btn-l {
   float: left;
 }
-
+  /* Right navbar buttons */
 #nav-btn-r {
   float: right;
 }
+ /* Makes legislation navbar dropdown twice as wide */
+#years {
+  width: 200%;
+}
+/* Legislation navbar button width 25% of total dropdown width */
+#years .nav-btn-drop {
+  width: 25%;
+}
+
+
 
 /* HELPERS */
-
 .bg-is-dark-red {
   background: #84152D !important;
 }
-
 .bg-is-yellow {
   background: #FFD200 !important;
 }
-
 .font-is-dark-red {
   color: #84152D !important;
 }
-
 .font-is-yellow {
   color: #FFD200 !important;
 }
