@@ -21,6 +21,7 @@
   <meta property="og:title" content="Ebbin for Virginia" />
 
   <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/script.js"></script>
 
   <title>Ebbin for Virginia</title>
 </head>
@@ -34,6 +35,9 @@
 
 <!-- Navbar -->
 <nav class="navbar-custom">
+  <div class="navbar-logo">
+    <p>LOGO HERE</p>
+  </div>
   <ul class="navbar-buttons" id="nav-btn-l">
     <li class="nav-btn-main"><a class="main-click" href="http://www.adamebbin.com/about-adam">About</a>
       <ul>
@@ -54,11 +58,6 @@
         <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/COVID19">COVID-19</a></li>
       </ul>
     </li>
-  </ul>
-  <div class="navbar-logo">
-    <p>LOGO HERE</p>
-  </div>
-  <ul class="navbar-buttons" id="nav-btn-r">
     <li class="nav-btn-main"><a class="main-click" href="http://www.adamebbin.com/2020-legislation">Legislation</a>
       <ul id="years">
         <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/2021-legislation">2021</a></li>
@@ -76,6 +75,11 @@
     <li class="nav-btn-main"><a class="main-click" href="http://www.adamebbin.com/contact-adam">Contact</a></li>
     <li class="nav-btn-main"><a class="main-click" href="http://www.adamebbin.com/contribute">Contribute</a></li>
   </ul>
+  <div class="menu-button" onclick="menuBtnFunc(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
 </nav>
 
 <!-- Site Body -->
