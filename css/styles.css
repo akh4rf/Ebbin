@@ -113,14 +113,16 @@ a.main-click, a.drop-click {
   display: none;
 }
   /* Nav dropdowns shown when hovered over */
-.nav-btn-main:hover ul {
-  width: 100%;
+@media screen and (min-width: 895px) {
+  .nav-btn-main:hover ul {
+    width: 100%;
 
-  margin-top: 10vh;
-  left: 0;
+    margin-top: 71px;
+    left: 0;
 
-  display: inline-block;
-  position: absolute;
+    display: inline-block;
+    position: absolute;
+  }
 }
   /* Buttons within nav dropdowns */
 .nav-btn-drop {
@@ -129,11 +131,34 @@ a.main-click, a.drop-click {
   display: inline-block;
 }
 
+.show-nav.navbar-buttons {
+  display: inline-block;
+}
+
 /* Top Menu Button */
 
-.menu-button {
+.menu-button-wrapper {
   display: none;
+  height: 100%;
+  width: 120px;
+  position: relative;
+  float: right;
   cursor: pointer;
+}
+
+.menu-button-wrapper p {
+  display: inline-block;
+  font-size: 2vh;
+  padding: 4vh 2vw 4vh 0vw;
+  color: #FFD200;
+  text-align: center;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.menu-button {
+  position: absolute;
+  display: inline-block;
   padding-top: 22px;
   padding-bottom: 22px;
 }
@@ -160,10 +185,17 @@ a.main-click, a.drop-click {
 }
 
 @media screen and (max-width: 894px) {
+  .navbar-logo {
+    width: 40%;
+  }
   .navbar-buttons {
+    width: 100%;
     display: none;
   }
-  .menu-button {
+  .nav-btn-main {
+    width: 100%;
+  }
+  .menu-button-wrapper {
     display: inline-block;
   }
 }
@@ -184,7 +216,6 @@ a.main-click, a.drop-click {
 }
   /* Nav columns within footer */
 .footer-column {
-  height: 20vh;
   width: 25%;
 
   margin-top: 4vh;
@@ -235,6 +266,28 @@ a.main-click, a.drop-click {
   }
   #footer-info, #footer-news, #footer-about {
     width: calc(100%/3);
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer-content {
+    height: 50vh !important;
+  }
+  .footer-column {
+    width: 50% !important;
+  }
+  #footer-legis a {
+    width: calc(100%/3) !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer-content {
+    height: 90vh !important;
+  }
+  .footer-column {
+    width: 100% !important;
+  }
+  #footer-legis a {
+    width: calc(100%/3) !important;
   }
 }
 
