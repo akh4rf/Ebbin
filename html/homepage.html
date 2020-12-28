@@ -21,12 +21,13 @@
   <meta property="og:title" content="Ebbin for Virginia" />
 
   <link rel="stylesheet" href="../css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="../js/script.js"></script>
 
   <title>Ebbin for Virginia</title>
 </head>
 
-<body>
+<body onresize="closeMenuIfBig()">
 
 <!-- Header Image -->
 <div class="image">
@@ -47,26 +48,26 @@
     </div>
   </div>
   <ul class="navbar-buttons" id="nav-btn-l">
-    <li class="nav-btn-main"><a class="main-click" href="http://www.adamebbin.com/about-adam">About</a>
+    <li id="aboutMenu" class="nav-btn-main" onclick="dropBtnFuncMobile(this)"><a class="main-click">About</a>
       <ul>
         <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/about-adam">About Adam</a></li>
         <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/about-30th-district">About District 30</a></li>
       </ul>
     </li>
-    <li class="nav-btn-main"><a class="main-click" href="http://www.adamebbin.com/COVID19">Info</a>
+    <li id="infoMenu" class="nav-btn-main" onclick="dropBtnFuncMobile(this)"><a class="main-click">Info</a>
       <ul>
         <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/updates-30th">Updates</a></li>
         <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/COVID19">COVID-19</a></li>
       </ul>
     </li>
-    <li class="nav-btn-main"><a class="main-click" href="#">News</a>
+    <li id="newsMenu" class="nav-btn-main" onclick="dropBtnFuncMobile(this)"><a class="main-click">News</a>
       <ul>
         <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/senator-ebbins-2020-legislative-reports">Legislative Reports</a></li>
         <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/news-clips">News Clips</a></li>
         <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/press-releases">Press Releases</a></li>
       </ul>
     </li>
-    <li class="nav-btn-main"><a class="main-click" href="http://www.adamebbin.com/2020-legislation">Legislation</a>
+    <li id="legisMenu" class="nav-btn-main" onclick="dropBtnFuncMobile(this)"><a class="main-click">Legislation</a>
       <ul id="years">
         <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/2021-legislation">2021</a></li>
         <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/2020-legislation">2020</a></li>
