@@ -71,7 +71,7 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
 .navbar-logo {
   height: 100%;
   width: 20%;
-  padding: 4vh 1vw;
+  padding: 4vh 0vw;
   float: left;
 
   font-size: 2vh;
@@ -83,7 +83,9 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
   color: #FFD200 !important; }
   @media screen and (max-width: 894px) {
     .navbar-logo {
+      padding: 4vh 0vw 4vh 20px !important;
       width: 40%;
+      text-align: left !important;
     }
 }
   /* Navbar Buttons */
@@ -163,41 +165,43 @@ a.main-click, a.drop-click {
 .menu-button-wrapper {
   display: none;
   height: 100%;
-  width: 120px;
+  width: 40%;
   position: relative;
   float: right;
   cursor: pointer; }
   @media screen and (max-width: 894px) {
     .menu-button-wrapper {
       display: inline-block; }}
-  /* Menu button text */
-  .menu-button-wrapper p {
-    display: inline-block;
-    font-size: 2vh;
-    padding: 4vh 2vw 4vh 0vw;
-    color: #FFD200;
-    text-align: center;
-    line-height: 1.1;
-    font-weight: 900;}
-  /* Menu button image */
-  .menu-button {
-    position: absolute;
-    display: inline-block;
-    padding-top: 22px;
-    padding-bottom: 22px;}
-    .bar1, .bar2, .bar3 {
-      width: 35px;
-      height: 5px;
-      background-color: #FFD200;
-      transition: 0.4s;}
-    .bar2, .bar3 {margin-top: 6px;}
-      /* Menu button image animation */
-      .change .bar1 {
-        transform: rotate(-45deg) translate(-9px, 6px);
-      }
-      .change .bar2 {opacity: 0;}
-      .change .bar3 {
-        transform: rotate(45deg) translate(-9px, -8px);
+  #menu-wrapper {width: 100px; margin-right: 20px; float: right;}
+    /* Menu button text */
+    .menu-button-wrapper p {
+      width: 65px;
+      display: inline-block;
+      font-size: 2vh;
+      padding: 4vh 10px 4vh 0vw;
+      color: #FFD200;
+      text-align: center;
+      line-height: 1.1;
+      font-weight: 900;}
+    /* Menu button image */
+    .menu-button {
+      position: absolute;
+      display: inline-block;
+      padding-top: 22px;
+      padding-bottom: 22px;}
+      .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #FFD200;
+        transition: 0.4s;}
+      .bar2, .bar3 {margin-top: 6px;}
+        /* Menu button image animation */
+        .change .bar1 {
+          transform: rotate(-45deg) translate(-9px, 6px);
+        }
+        .change .bar2 {opacity: 0;}
+        .change .bar3 {
+          transform: rotate(45deg) translate(-9px, -8px);
 }
 
 /* Footer */
