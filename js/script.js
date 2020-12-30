@@ -32,6 +32,12 @@ function dropBtnFuncMobile(x) {
   }
 }
 
+// Resize Function //
+function resizeFunction() {
+  closeMenuIfBig();
+  resizeFirstBodyDiv();
+}
+
 // Closes the navigation dropdown if viewport gets too wide //
 function closeMenuIfBig() {
   var winWidth = $(window).width();
@@ -42,4 +48,16 @@ function closeMenuIfBig() {
       menuBtnFunc(x[0]);
     }
   }
+}
+
+// Resizes first body div's textbox margin-top //
+function resizeFirstBodyDiv() {
+  var txtdiv1 = document.getElementById("main-txt-1"),
+      style1 = window.getComputedStyle(txtdiv1),
+      height1 = style1.getPropertyValue('height');
+  var imgdiv1 = document.getElementById("img-cont-1"),
+      style2 = window.getComputedStyle(imgdiv1),
+      height2 = style2.getPropertyValue('height');
+  var newMargin = (parseFloat(height2) - parseFloat(height1))/2;
+  txtdiv1.style.margin = (newMargin+"px 5% 0px");
 }

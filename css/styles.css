@@ -204,6 +204,63 @@ a.main-click, a.drop-click {
           transform: rotate(45deg) translate(-9px, -8px);
 }
 
+/* Columns */
+.columns {
+  display: block;
+  overflow: auto;
+  padding: 5% 5% 5% 5%; }
+  .column {
+    height: 100%;
+    width: 50%;
+    display: block;
+    float: left; }
+    .column .text-container {
+      margin: 0 5%;
+    }
+    .column h1 {
+      font-size: 2vh;
+      text-align: center;
+      line-height: 1.1;
+      font-weight: 900;
+      color: #000000;
+    }
+    .column .bar {
+      height: 5px;
+      width: 100px;
+      margin: auto;
+      margin-top: 10px !important;
+      background: #000000;
+    }
+    .column p {
+      margin-top: 10px;
+      font-size: 2vh;
+      text-align: center;
+      line-height: 1.1;
+      font-weight: 500;
+      color: #000000;
+    }
+    .img-container {
+
+    }
+    .column img {
+      height: auto;
+      width: 95%;
+      margin: 2.5%; }
+    @media screen and (max-width: 659px) {
+      .column {
+        width: 100%;
+      }
+      .column .text-container {
+        margin: 5% 5% !important;
+      }
+}
+
+/* Body div */
+.main-body {
+  width: 100%;
+  height: 100vh;
+}
+
 /* Footer */
   /* Overall footer wrapper */
 .footer-custom {
@@ -289,12 +346,6 @@ a.main-click, a.drop-click {
   .footer-column {
     width: 100% !important;
   }
-}
-
-/* Body div */
-.main-body {
-  width: 100%;
-  height: 100vh;
 }
 
 

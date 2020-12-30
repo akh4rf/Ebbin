@@ -27,7 +27,7 @@
   <title>Ebbin for Virginia</title>
 </head>
 
-<body onresize="closeMenuIfBig()">
+<body onresize="resizeFunction()">
 
 <!-- Header Image -->
 <div class="image">
@@ -88,10 +88,32 @@
   </ul>
 </nav>
 
-<!-- Site Body -->
-<div class="main-body">
-
+<!-- About Adam -->
+<div class="columns">
+  <div id="img-cont-1" class="column">
+    <div class="img-container bg-is-dark-red">
+      <img src="../images/EbbinSquare.jpg" alt="Adam Ebbin smiling at camera">
+    </div>
+  </div>
+  <div class="column">
+    <div id="main-txt-1" class="text-container">
+      <h1>ABOUT ADAM</h1>
+      <div class="bar"></div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt molestiae, molestias fuga dicta consequatur nobis amet, architecto laborum tempora modi laudantium rem voluptatibus, earum cupiditate alias numquam non aliquam inventore.</p>
+    </div>
+  </div>
 </div>
+
+<script>
+  var txtdiv1 = document.getElementById("main-txt-1"),
+      style1 = window.getComputedStyle(txtdiv1),
+      height1 = style1.getPropertyValue('height');
+  var imgdiv1 = document.getElementById("img-cont-1"),
+      style2 = window.getComputedStyle(imgdiv1),
+      height2 = style2.getPropertyValue('height');
+  var newMargin = (parseFloat(height2) - parseFloat(height1))/2;
+  txtdiv1.style.margin = (newMargin+"px 5% 0px");
+</script>
 
 <!-- Footer -->
 <footer class="footer-custom">
