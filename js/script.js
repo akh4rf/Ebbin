@@ -17,7 +17,7 @@ function menuBtnFunc(x) {
 
 // Governs the nested dropdown navigation for mobible users //
 function dropBtnFuncMobile(x) {
-  var winWidth = $(window).width();
+  var winWidth = $("body").prop("clientWidth");
   // Check if current dropdown is already displayed //
   var t = x.classList.contains("show-drop");
   // Make sure other dropdowns are minimized //
@@ -36,11 +36,12 @@ function dropBtnFuncMobile(x) {
 function resizeFunction() {
   closeMenuIfBig();
   resizeFirstBodyDiv();
+  flipOrderMainCol1();
 }
 
 // Closes the navigation dropdown if viewport gets too wide //
 function closeMenuIfBig() {
-  var winWidth = $(window).width();
+  var winWidth = $("body").prop("clientWidth");
   // Close menu if menu is open and vw > 894 //
   if (winWidth > 894) {
     var x = document.getElementsByClassName("change");
@@ -60,4 +61,21 @@ function resizeFirstBodyDiv() {
       height2 = style2.getPropertyValue('height');
   var newMargin = (parseFloat(height2) - parseFloat(height1))/2;
   txtdiv1.style.margin = (newMargin+"px 5% 0px");
+}
+
+var winWidth = $("body").prop("clientWidth");
+if (winWidth > 659) {var imgIsBefore = true;}
+else {var imgIsBefore = false;}
+
+
+function flipOrderMainCol1() {
+  var winWidth = $("body").prop("clientWidth");
+  if ((winWidth <= 659) && !imgIsBefore) {
+    jQuery(jQuery("#txt-cont-1").detach()).appendTo(".columns");
+    imgIsBefore = true;
+  }
+  else if ((winWidth > 659) && imgIsBefore) {
+    jQuery(jQuery("#img-cont-1").detach()).appendTo(".columns");
+    imgIsBefore = false;
+  }
 }
