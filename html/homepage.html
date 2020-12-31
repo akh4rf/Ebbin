@@ -89,7 +89,7 @@
 </nav>
 
 <!-- About Adam -->
-<div class="columns">
+<div id="main-col-1" class="columns">
   <div id="img-cont-1" class="column">
     <div class="img-container bg-is-dark-red">
       <img src="../images/EbbinSquare.jpg" alt="Adam Ebbin smiling at camera">
@@ -99,7 +99,10 @@
     <div id="main-txt-1" class="text-container">
       <h1>ABOUT ADAM</h1>
       <div class="bar"></div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt molestiae, molestias fuga dicta consequatur nobis amet, architecto laborum tempora modi laudantium rem voluptatibus, earum cupiditate alias numquam non aliquam inventore.</p>
+      <p>Adam represents the 30th Senate District, consisting of approximately 200,000 residents
+        who reside in portions of Arlington, Alexandria, and parts of Fairfax County’s Mount Vernon
+        and Lee Districts. The district borders the Potomac River and includes Reagan National Airport,
+        Old Town Alexandria and George Washington’s Mount Vernon Estate.</p>
     </div>
   </div>
 </div>
@@ -115,8 +118,56 @@
   txtdiv1.style.margin = (newMargin+"px 5% 0px");
 
   var winWidth = $("body").prop("clientWidth");
-  if (winWidth > 659) {var imgIsBefore = true; flipOrderMainCol1();}
+  if (winWidth >= 645) {var imgIsBefore = true; flipOrderMainCol1();}
   else {var imgIsBefore = false;}
+</script>
+
+<!-- Priorities -->
+<div class="hero-grid">
+  <div class="title">PRIORITIES</div>
+  <div class="bar"></div>
+  <div class="img-container">
+    <a href=""><img src="../images/EbbinVVA.jpeg" alt=""></a>
+  </div>
+  <div class="img-container">
+    <a href=""><img src="../images/OldTown.jpg" alt=""></a>
+  </div>
+  <div class="img-container">
+    <a href=""><img src="../images/Parkway.jpg" alt=""></a>
+  </div>
+  <div class="img-container">
+    <a href=""><img src="../images/GunReform.jpg" alt=""></a>
+  </div>
+</div>
+
+<!-- Progressive Champion -->
+<div class="columns">
+  <div id="img-cont-2" class="column">
+    <div class="img-container bg-is-dark-red">
+      <img src="../images/EbbinSquare2.jpg" alt="Adam Ebbin speaking into microphone">
+    </div>
+  </div>
+  <div id="txt-cont-2" class="column">
+    <div id="main-txt-2" class="text-container">
+      <h1>PROGRESSIVE CHAMPION</h1>
+      <div class="bar"></div>
+      <p>During his time in the General Assembly, Adam has passed numerous pieces of landmark
+      legislation, banning discrimination in employment, housing, and public accommodations
+      on the basis of sexual orientation or gender identity, decriminalizing marijuana, and creating
+      a Public Defender office in Arlington County.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  var txtdiv2 = document.getElementById("main-txt-2"),
+      style3 = window.getComputedStyle(txtdiv2),
+      height3 = style3.getPropertyValue('height');
+  var imgdiv2 = document.getElementById("img-cont-2"),
+      style4 = window.getComputedStyle(imgdiv2),
+      height4 = style4.getPropertyValue('height');
+  var newMargin2 = (parseFloat(height4) - parseFloat(height3))/2;
+  txtdiv2.style.margin = (newMargin2+"px 5% 0px");
 </script>
 
 <!-- Footer -->

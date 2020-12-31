@@ -59,23 +59,32 @@ function resizeFirstBodyDiv() {
   var imgdiv1 = document.getElementById("img-cont-1"),
       style2 = window.getComputedStyle(imgdiv1),
       height2 = style2.getPropertyValue('height');
-  var newMargin = (parseFloat(height2) - parseFloat(height1))/2;
-  txtdiv1.style.margin = (newMargin+"px 5% 0px");
+  var newMargin1 = (parseFloat(height2) - parseFloat(height1))/2;
+  txtdiv1.style.margin = (newMargin1+"px 5% 0px");
+
+  var txtdiv2 = document.getElementById("main-txt-2"),
+      style3 = window.getComputedStyle(txtdiv2),
+      height3 = style3.getPropertyValue('height');
+  var imgdiv2 = document.getElementById("img-cont-2"),
+      style4 = window.getComputedStyle(imgdiv2),
+      height4 = style4.getPropertyValue('height');
+  var newMargin2 = (parseFloat(height4) - parseFloat(height3))/2;
+  txtdiv2.style.margin = (newMargin2+"px 5% 0px");
 }
 
 var winWidth = $("body").prop("clientWidth");
-if (winWidth > 659) {var imgIsBefore = true;}
+if (winWidth >= 645) {var imgIsBefore = true;}
 else {var imgIsBefore = false;}
 
 
 function flipOrderMainCol1() {
   var winWidth = $("body").prop("clientWidth");
-  if ((winWidth <= 659) && !imgIsBefore) {
-    jQuery(jQuery("#txt-cont-1").detach()).appendTo(".columns");
+  if ((winWidth < 645) && !imgIsBefore) {
+    jQuery(jQuery("#txt-cont-1").detach()).appendTo("#main-col-1");
     imgIsBefore = true;
   }
-  else if ((winWidth > 659) && imgIsBefore) {
-    jQuery(jQuery("#img-cont-1").detach()).appendTo(".columns");
+  else if ((winWidth >= 645) && imgIsBefore) {
+    jQuery(jQuery("#img-cont-1").detach()).appendTo("#main-col-1");
     imgIsBefore = false;
   }
 }

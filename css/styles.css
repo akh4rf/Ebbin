@@ -208,57 +208,81 @@ a.main-click, a.drop-click {
 .columns {
   display: block;
   overflow: auto;
-  padding: 5% 5% 5% 5%; }
+  padding: 2.5% 5%; }
   .column {
     height: 100%;
     width: 50%;
     display: block;
     float: left; }
     .column .text-container {
-      margin: 0 5%;
-    }
+      margin: 0 5%; }
     .column h1 {
-      font-size: 2vh;
+      font-size: 5vh;
       text-align: center;
       line-height: 1.1;
-      font-weight: 900;
-      color: #000000;
-    }
+      font-weight: 500;
+      color: #000000; }
     .column .bar {
       height: 5px;
       width: 100px;
       margin: auto;
       margin-top: 10px !important;
-      background: #000000;
-    }
+      background: #000000; }
     .column p {
       margin-top: 10px;
-      font-size: 2vh;
+      font-size: 2.5vh;
       text-align: center;
       line-height: 1.1;
       font-weight: 500;
-      color: #000000;
-    }
-    .img-container {
-
-    }
+      color: #000000; }
     .column img {
       height: auto;
       width: 95%;
       margin: 2.5%; }
     @media screen and (max-width: 659px) {
       .column {
-        width: 100%;
-      }
-      .column .text-container {
-        margin: 5% 5% !important;
-      }
+        width: 100%; }
+        .column .text-container {
+          margin: 5% 5% !important; }
 }
 
-/* Body div */
-.main-body {
-  width: 100%;
-  height: 100vh;
+
+/* Photo Grid */
+.hero-grid {
+  margin: 5% 0;
+  display: block; }
+  .hero-grid .title {
+    font-size: 5vh;
+    text-align: center;
+    line-height: 1.1;
+    font-weight: 500;
+    color: #000000;
+  }
+  .hero-grid .bar {
+    height: 5px;
+    width: 100px;
+    margin: auto;
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+    background: #000000;
+  }
+  .hero-grid .img-container {
+    width: 50%;
+    height: calc(100%/3);
+    display: inline-block;
+    position: relative; }
+    @media screen and (max-width: 659px) {
+        .hero-grid .img-container {
+          width: 100%;
+          height: calc(200%/3);
+        }
+    }
+    .hero-grid .img-container a {
+      z-index: 1;
+    }
+      .hero-grid .img-container a img {
+        width: 100%;
+        height: auto;
 }
 
 /* Footer */
