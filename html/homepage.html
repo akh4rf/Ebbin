@@ -107,36 +107,45 @@
   </div>
 </div>
 
-<script>
-  var txtdiv1 = document.getElementById("main-txt-1"),
-      style1 = window.getComputedStyle(txtdiv1),
-      height1 = style1.getPropertyValue('height');
-  var imgdiv1 = document.getElementById("img-cont-1"),
-      style2 = window.getComputedStyle(imgdiv1),
-      height2 = style2.getPropertyValue('height');
-  var newMargin = (parseFloat(height2) - parseFloat(height1))/2;
-  txtdiv1.style.margin = (newMargin+"px 5% 0px");
-
-  var winWidth = $("body").prop("clientWidth");
-  if (winWidth >= 645) {var imgIsBefore = true; flipOrderMainCol1();}
-  else {var imgIsBefore = false;}
-</script>
-
 <!-- Priorities -->
 <div class="hero-grid">
   <div class="title">PRIORITIES</div>
   <div class="bar"></div>
-  <div class="img-container">
-    <a href=""><img src="../images/EbbinVVA.jpeg" alt=""></a>
+  <div id="img-cont-4" class="img-cont-hero">
+    <a href="">
+      <div id="main-txt-4" style="text-shadow: .4vw .4vw #007A75;" class="txt-cont-hero">
+        LGBTQ+ RIGHTS
+      </div>
+      <div style="background: #00AD95" class="img-overlay"></div>
+      <img src="../images/EbbinVVA.jpeg" alt="">
+    </a>
   </div>
-  <div class="img-container">
-    <a href=""><img src="../images/OldTown.jpg" alt=""></a>
+  <div id="img-cont-5" class="img-cont-hero">
+    <a href="">
+      <div id="main-txt-5" style="text-shadow: .4vw .4vw #8B004E;" class="txt-cont-hero">
+        ECONOMY
+      </div>
+      <div style="background: #BC0061" class="img-overlay"></div>
+      <img src="../images/OldTown.jpg" alt="">
+    </a>
   </div>
-  <div class="img-container">
-    <a href=""><img src="../images/Parkway.jpg" alt=""></a>
+  <div id="img-cont-6" class="img-cont-hero">
+    <a href="">
+      <div id="main-txt-6" style="text-shadow: .4vw .4vw #AF9200;" class="txt-cont-hero">
+        ENVIRONMENT
+      </div>
+      <div style="background: #F3F300" class="img-overlay"></div>
+      <img src="../images/Parkway.jpg" alt="">
+    </a>
   </div>
-  <div class="img-container">
-    <a href=""><img src="../images/GunReform.jpg" alt=""></a>
+  <div id="img-cont-7" class="img-cont-hero">
+    <a href="">
+      <div id="main-txt-7" style="text-shadow: .4vw .4vw #7A009D;" class="txt-cont-hero">
+        GUN REFORM
+      </div>
+      <div style="background: #AA00D6" class="img-overlay"></div>
+      <img src="../images/GunReform.jpg" alt="">
+    </a>
   </div>
 </div>
 
@@ -159,15 +168,30 @@
   </div>
 </div>
 
+<!-- Fighting For The 30th -->
+<div id="main-col-3" class="columns">
+  <div id="img-cont-3" class="column">
+    <div class="img-container bg-is-dark-red">
+      <img src="../images/District30.png" alt="A map of District 30">
+    </div>
+  </div>
+  <div id="txt-cont-3" class="column">
+    <div id="main-txt-3" class="text-container">
+      <h1>FIGHTING FOR THE 30TH</h1>
+      <div class="bar"></div>
+      <p>Adam represents the 30th Senate District, consisting of approximately 200,000 residents
+        who reside in portions of Arlington, Alexandria, and parts of Fairfax County’s Mount Vernon
+        and Lee Districts. The district borders the Potomac River and includes Reagan National Airport,
+        Old Town Alexandria and George Washington’s Mount Vernon Estate.</p>
+    </div>
+  </div>
+</div>
+
 <script>
-  var txtdiv2 = document.getElementById("main-txt-2"),
-      style3 = window.getComputedStyle(txtdiv2),
-      height3 = style3.getPropertyValue('height');
-  var imgdiv2 = document.getElementById("img-cont-2"),
-      style4 = window.getComputedStyle(imgdiv2),
-      height4 = style4.getPropertyValue('height');
-  var newMargin2 = (parseFloat(height4) - parseFloat(height3))/2;
-  txtdiv2.style.margin = (newMargin2+"px 5% 0px");
+  resizeTextMarginTop();
+  var winWidth = $("body").prop("clientWidth");
+  if (winWidth >= 645) {var imgIsBefore = true; flipColumnOrder();}
+  else {var imgIsBefore = false;}
 </script>
 
 <!-- Footer -->

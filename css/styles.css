@@ -246,7 +246,6 @@ a.main-click, a.drop-click {
           margin: 5% 5% !important; }
 }
 
-
 /* Photo Grid */
 .hero-grid {
   margin: 5% 0;
@@ -266,23 +265,47 @@ a.main-click, a.drop-click {
     margin-bottom: 20px !important;
     background: #000000;
   }
-  .hero-grid .img-container {
+  .hero-grid .img-cont-hero {
     width: 50%;
     height: calc(100%/3);
     display: inline-block;
     position: relative; }
     @media screen and (max-width: 659px) {
-        .hero-grid .img-container {
+        .hero-grid .img-cont-hero {
           width: 100%;
           height: calc(200%/3);
         }
     }
-    .hero-grid .img-container a {
+    .hero-grid .img-cont-hero a {
       z-index: 1;
     }
-      .hero-grid .img-container a img {
+      .hero-grid .img-cont-hero a .txt-cont-hero {
+        width: 90%;
+        position: absolute;
+        text-align: center;
+        font-size: 5vw;
+        color: #FFFFFF;
+        font-weight: 700;
+        float: left;
+        z-index: 2;
+      }
+      .hero-grid .img-cont-hero a .img-overlay {
+        height: 100%;
         width: 100%;
-        height: auto;
+        position: absolute;
+        display: block;
+        opacity: 0.2;
+        z-index: 1;
+      }
+      @media screen and (max-width: 659px) {
+          .hero-grid .img-cont-hero a .txt-cont-hero {
+            font-size: 10vw;
+          }
+      }
+        .hero-grid .img-cont-hero a img {
+          width: 100%;
+          height: auto;
+          z-index: 0;
 }
 
 /* Footer */

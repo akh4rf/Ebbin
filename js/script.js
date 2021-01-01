@@ -35,8 +35,8 @@ function dropBtnFuncMobile(x) {
 // Resize Function //
 function resizeFunction() {
   closeMenuIfBig();
-  resizeFirstBodyDiv();
-  flipOrderMainCol1();
+  resizeTextMarginTop();
+  flipColumnOrder();
 }
 
 // Closes the navigation dropdown if viewport gets too wide //
@@ -52,39 +52,35 @@ function closeMenuIfBig() {
 }
 
 // Resizes first body div's textbox margin-top //
-function resizeFirstBodyDiv() {
-  var txtdiv1 = document.getElementById("main-txt-1"),
-      style1 = window.getComputedStyle(txtdiv1),
-      height1 = style1.getPropertyValue('height');
-  var imgdiv1 = document.getElementById("img-cont-1"),
-      style2 = window.getComputedStyle(imgdiv1),
-      height2 = style2.getPropertyValue('height');
-  var newMargin1 = (parseFloat(height2) - parseFloat(height1))/2;
-  txtdiv1.style.margin = (newMargin1+"px 5% 0px");
-
-  var txtdiv2 = document.getElementById("main-txt-2"),
-      style3 = window.getComputedStyle(txtdiv2),
-      height3 = style3.getPropertyValue('height');
-  var imgdiv2 = document.getElementById("img-cont-2"),
-      style4 = window.getComputedStyle(imgdiv2),
-      height4 = style4.getPropertyValue('height');
-  var newMargin2 = (parseFloat(height4) - parseFloat(height3))/2;
-  txtdiv2.style.margin = (newMargin2+"px 5% 0px");
+function resizeTextMarginTop() {
+  for (var i = 1; i < 8; i++) {
+    var txtdiv = document.getElementById("main-txt-"+i),
+        style1 = window.getComputedStyle(txtdiv),
+        height1 = style1.getPropertyValue('height');
+    var imgdiv = document.getElementById("img-cont-"+i),
+        style2 = window.getComputedStyle(imgdiv),
+        height2 = style2.getPropertyValue('height');
+    var newMargin = (parseFloat(height2) - parseFloat(height1))/2;
+    var currentMargin = txtdiv.style.margin.split("");
+    console.log(currentMargin);
+    txtdiv.style.margin = (newMargin+"px 5% 0px");
+  }
 }
 
-var winWidth = $("body").prop("clientWidth");
-if (winWidth >= 645) {var imgIsBefore = true;}
-else {var imgIsBefore = false;}
 
-
-function flipOrderMainCol1() {
-  var winWidth = $("body").prop("clientWidth");
+function flipColumnOrder() {
+  var winWidth = $("body").prop("clientWidth"),
+      list = [1,3];
   if ((winWidth < 645) && !imgIsBefore) {
-    jQuery(jQuery("#txt-cont-1").detach()).appendTo("#main-col-1");
+    for (let num of list) {
+      jQuery(jQuery("#txt-cont-"+num).detach()).appendTo("#main-col-"+num);
+    }
     imgIsBefore = true;
   }
   else if ((winWidth >= 645) && imgIsBefore) {
-    jQuery(jQuery("#img-cont-1").detach()).appendTo("#main-col-1");
+    for (let num of list) {
+      jQuery(jQuery("#img-cont-"+num).detach()).appendTo("#main-col-"+num);
+    }
     imgIsBefore = false;
   }
 }
