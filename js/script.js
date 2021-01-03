@@ -62,7 +62,6 @@ function resizeTextMarginTop() {
         height2 = style2.getPropertyValue('height');
     var newMargin = (parseFloat(height2) - parseFloat(height1))/2;
     var currentMargin = txtdiv.style.margin.split("");
-    console.log(currentMargin);
     txtdiv.style.margin = (newMargin+"px 5% 0px");
   }
 }
@@ -71,13 +70,13 @@ function resizeTextMarginTop() {
 function flipColumnOrder() {
   var winWidth = $("body").prop("clientWidth"),
       list = [1,3];
-  if ((winWidth < 645) && !imgIsBefore) {
+  if ((winWidth < 726) && !imgIsBefore) {
     for (let num of list) {
       jQuery(jQuery("#txt-cont-"+num).detach()).appendTo("#main-col-"+num);
     }
     imgIsBefore = true;
   }
-  else if ((winWidth >= 645) && imgIsBefore) {
+  else if ((winWidth >= 726) && imgIsBefore) {
     for (let num of list) {
       jQuery(jQuery("#img-cont-"+num).detach()).appendTo("#main-col-"+num);
     }
