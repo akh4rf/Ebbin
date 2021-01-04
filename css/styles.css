@@ -71,10 +71,10 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
 .navbar-logo {
   height: 100%;
   width: 20%;
-  padding: 4vh 0vw;
+  padding: 28px 0px;
   float: left;
 
-  font-size: 2vh;
+  font-size: 15px;
   text-align: center;
   line-height: 1.1;
   font-weight: 900;
@@ -83,7 +83,7 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
   color: #FFD200 !important; }
   @media screen and (max-width: 894px) {
     .navbar-logo {
-      padding: 4vh 0vw 4vh 20px !important;
+      padding: 28px 0vw 28px 20px !important;
       width: 40%;
       text-align: left !important;
     }
@@ -115,9 +115,9 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
 a.main-click, a.drop-click {
   height: 100%;
   width: 100%;
-  padding: 4vh 1vw;
+  padding: 28px 1vw;
 
-  font-size: 2vh;
+  font-size: 15px;
   letter-spacing: 0.1vw;
   text-align: center;
   text-transform: uppercase;
@@ -177,8 +177,8 @@ a.main-click, a.drop-click {
     .menu-button-wrapper p {
       width: 65px;
       display: inline-block;
-      font-size: 2vh;
-      padding: 4vh 10px 4vh 0vw;
+      font-size: 15px;
+      padding: 28px 10px 28px 0vw;
       color: #FFD200;
       text-align: center;
       line-height: 1.1;
@@ -217,7 +217,7 @@ a.main-click, a.drop-click {
     .column .text-container {
       margin: 0 5%; }
     .column .text-container h1 {
-      font-size: 5vh;
+      font-size: 36px;
       text-align: center;
       line-height: 1.1;
       font-weight: 500;
@@ -230,7 +230,7 @@ a.main-click, a.drop-click {
       background: #000000; }
     .column .text-container p {
       margin-top: 10px;
-      font-size: 2.5vh;
+      font-size: 18px;
       text-align: center;
       line-height: 1.1;
       font-weight: 500;
@@ -251,7 +251,7 @@ a.main-click, a.drop-click {
       line-height: 1.1;
       font-weight: 900;
     }
-    .column .text-container a:hover {color: #FFD200;}
+    .column .text-container a:hover {}
     .column img {
       height: auto;
       width: 95%;
@@ -268,7 +268,7 @@ a.main-click, a.drop-click {
   margin: 5% 0;
   display: block; }
   .hero-grid .title {
-    font-size: 5vh;
+    font-size: 36px;
     text-align: center;
     line-height: 1.1;
     font-weight: 500;
@@ -317,17 +317,14 @@ a.main-click, a.drop-click {
       }
       @media screen and (max-width: 740px) {
           .hero-grid .img-cont-hero a .txt-cont-hero {
-            font-size: 10vw;
-          }
-      }
+            font-size: 10vw; }}
         .hero-grid .img-cont-hero a img {
           width: 100%;
           height: auto;
-          z-index: 0;
-}
-.hero-grid .img-cont-hero a:hover img {
-    -webkit-transform: scale(1.1);
-    -webkit-transition: all 0.3s ease-in-out;
+          z-index: 0; }
+        .hero-grid .img-cont-hero a:hover img {
+          -webkit-transform: scale(1.1);
+          -webkit-transition: all 0.3s ease-in-out;
 }
 
 /* Footer */
@@ -336,7 +333,7 @@ a.main-click, a.drop-click {
   width: 100%;
   display: inline-block;
   overflow: auto;
-  padding: 5vh 5vw;
+  padding: 36px 50px;
 
   background: #84152D !important;
   color: #FFD200;
@@ -351,25 +348,25 @@ a.main-click, a.drop-click {
 .footer-column {
   width: 25%;
 
-  padding: 2vh;
+  padding: 15px;
   float: left;
 
   display: inline-block;
   text-align: center; }
     /* Column title text */
   .footer-column h1 {
-    font-size: 3vh;
+    font-size: 22px;
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
   }
     /* Column clickable links */
   .footer-column a {
-    height: 2vh;
+    height: 14px;
     width: 100%;
 
     text-transform: uppercase;
-    margin-block-start: 2vh;
+    margin-block-start: 14px;
     display: inline-block;
     text-decoration: none;
     color: #FFD200; }
@@ -381,7 +378,7 @@ a.main-click, a.drop-click {
       width: 25%; }
     /* Column link text */
     .footer-column a h2 {
-      font-size: 2vh;
+      font-size: 14px;
       font-weight: 600;
       text-transform: uppercase;
 }
@@ -428,7 +425,35 @@ a.main-click, a.drop-click {
   }
 }
 
+/* Mailing List Sign-Up Form */
 
+.form-input {
+  width: 25%;
+  display: inline-block;
+  overflow: hidden;
+  background: #84152D;
+  border-color: #84152D;
+}
+fieldset {
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-block-start: 0em;
+  padding-inline-start: 0em;
+  padding-inline-end: 0em;
+  padding-block-end: 0em;
+  border-width: 0px;
+}
+input {
+  width: 100%;
+  height: 2.3125rem;
+  padding: .5rem;
+  color: rgba(0,0,0,0.75);
+  font-family: 'Montserrat', sans-serif;
+  background: #FFFFFF;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+}
 
 /* SPECIFIC OBJECTS */
 
