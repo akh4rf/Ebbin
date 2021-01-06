@@ -70,13 +70,13 @@ function resizeTextMarginTop() {
 function flipColumnOrder() {
   var winWidth = $("body").prop("clientWidth"),
       list = [1,3];
-  if ((winWidth < 726) && !imgIsBefore) {
+  if ((winWidth < 741) && !imgIsBefore) {
     for (let num of list) {
       jQuery(jQuery("#txt-cont-"+num).detach()).appendTo("#main-col-"+num);
     }
     imgIsBefore = true;
   }
-  else if ((winWidth >= 726) && imgIsBefore) {
+  else if ((winWidth >= 741) && imgIsBefore) {
     for (let num of list) {
       jQuery(jQuery("#img-cont-"+num).detach()).appendTo("#main-col-"+num);
     }
