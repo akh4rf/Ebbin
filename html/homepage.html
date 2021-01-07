@@ -25,6 +25,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="../js/script.js"></script>
 
+  <script type="text/javascript" src="http://d1aqhv4sn5kxtx.cloudfront.net/actiontag/at.js"></script>
+
   <title>Ebbin for Virginia</title>
 </head>
 
@@ -201,37 +203,9 @@
 <!-- Footer -->
 <footer class="footer-custom">
   <div class="footer-content">
-    <form class="form-container">
-      <fieldset>
-        <div id="firstName" class="form-input">
-          <label>
-            <kbd>First Name</kbd>
-            <input type="text" autocomplete="given-name" x-autocompletetype="given-name" required="" title="First Name (required)" name="FirstName" value="" maxlength="50" placeholder="First Name*">
-          </label>
-        </div>
-        <div id="lastName" class="form-input">
-          <label>
-            <kbd>Last Name</kbd>
-            <input type="text" autocomplete="family-name" x-autocompletetype="surname" required="" title="Last Name (required)" name="LastName" value="" maxlength="50" placeholder="Last Name*">
-          </label>
-        </div>
-        <div id="ZIPCode" class="form-input">
-          <label>
-            <kbd>ZIP Code</kbd>
-            <input type="tel" autocomplete="postal-code" x-autocompletetype="postal-code" pattern="^\d{5}([\-]\d{4})?$" required="" title="Zip Code (required)" name="PostalCode" value="" maxlength="10" placeholder="Zip Code*">
-          </label>
-        </div>
-        <div id="email" class="form-input">
-          <label>
-            <kbd>Email Address</kbd>
-            <input type="email" autocomplete="email" x-autocompletetype="email" pattern="^([\w!#$%&amp;'*+\-\/=?\^`{|}~]+\.)*[\w!#$%&amp;'*+\-\/=?\^`{|}~]+@((((([a-zA-Z0-9]{1}[a-zA-Z0-9\-]{0,62}[a-zA-Z0-9]{1})|[a-zA-Z])\.)+[a-zA-Z]{2,62})|(\d{1,3}\.){3}\d{1,3}(:\d{1,5})?)$" required="" title="Email Address (required)" name="EmailAddress" value="" maxlength="100" placeholder="Email Address*">
-          </label>
-        </div>
-      </fieldset>
-      <div class="form-submit-button">
-        <input type="submit" value="Submit" class="">
-      </div>
-    </form>
+    <div class="form-container">
+      <div class="ngp-form" data-id="6478709538949169152" data-endpoint="https://api.myngp.com" data-labels="inline" data-databag="everybody"></div>
+    </div>
     <div id="footer-about" class="footer-column">
       <u><h1>About</h1></u>
       <a href="http://www.adamebbin.com/about-adam"><h2>About Adam</h2></a>

@@ -9,7 +9,7 @@ html {
 /* Body Tag */
 body {
   /* Sets font family of document */
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   /* Eliminates weird whitespace */
   font-size: 0;
 }
@@ -427,32 +427,21 @@ a.main-click, a.drop-click {
 
 /* Mailing List Sign-Up Form */
 
-.form-input {
-  width: 25%;
-  display: inline-block;
-  overflow: hidden;
-  background: #84152D;
-  border-color: #84152D;
+.at-inner {
+  background-color: #84152D !important;
 }
-fieldset {
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-block-start: 0em;
-  padding-inline-start: 0em;
-  padding-inline-end: 0em;
-  padding-block-end: 0em;
-  border-width: 0px;
+
+.at-legend {
+  display: none;
 }
-input {
-  width: 100%;
-  height: 2.3125rem;
-  padding: .5rem;
-  color: rgba(0,0,0,0.75);
-  font-family: 'Montserrat', sans-serif;
-  background: #FFFFFF;
-  border-style: solid;
-  border-radius: 10px;
-  border-width: 2px;
+
+header.at-title {
+  color: #FFD200 !important;
+}
+
+.at-form-submit .at-submit {
+  width: 97px !important;
+  float: none !important;
 }
 
 /* SPECIFIC OBJECTS */
