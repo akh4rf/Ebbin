@@ -333,7 +333,7 @@ a.main-click, a.drop-click {
   width: 100%;
   display: inline-block;
   overflow: auto;
-  padding: 36px 50px;
+  padding-bottom: 36px;
 
   background: #84152D !important;
   color: #FFD200;
@@ -343,6 +343,7 @@ a.main-click, a.drop-click {
   width: 100%;
   display: inline-block;
   overflow: auto;
+  padding: 36px 50px 0px 50px;
 }
   /* Nav columns within footer */
 .footer-column {
@@ -397,6 +398,21 @@ a.main-click, a.drop-click {
   .footer-social a:hover {
     color: #FFFFFF;
 }
+
+.footer-disclaimer {
+  display: block;
+  overflow: auto;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px;
+  width: 340px;
+  border: 2px;
+  border-style: solid;
+  border-color: #FFD200;}
+  .footer-disclaimer p {
+  font-size: 15px;
+  text-align: center;
+}
   /* Change footer settings when viewport width <= 894px */
 @media screen and (max-width: 894px) {
   .footer-column {
@@ -422,6 +438,12 @@ a.main-click, a.drop-click {
 @media screen and (max-width: 480px) {
   .footer-column {
     width: 100% !important;
+  }
+  .footer-disclaimer {
+    width: 310px;
+  }
+  .footer-disclaimer p {
+    font-size: 13px;
   }
 }
 
