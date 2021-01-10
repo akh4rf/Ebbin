@@ -27,6 +27,16 @@ a {
   cursor: pointer;
 }
 
+h1, h2, h3, h4, h5, h6, p {font-weight: inherit; line-height: 1.1;}
+
+h1 {font-size: 36px;}
+h2 {font-size: 24px;}
+h3 {font-size: 18px;}
+h4 {font-size: 16px;}
+h5 {font-size: 15px;}
+h6 {font-size: 14px;}
+p {font-size: 12px;}
+
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
     /* Initial margin/padding of all of these elements is 0 */
     margin: 0;
@@ -77,7 +87,6 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
   font-size: 15px;
   text-align: center;
   line-height: 1.1;
-  font-weight: 900;
 
   background: #84152D !important;
   color: #FFD200 !important; }
@@ -174,14 +183,13 @@ a.main-click, a.drop-click {
       display: inline-block; }}
   #menu-wrapper {width: 100px; margin-right: 20px; float: right;}
     /* Menu button text */
-    .menu-button-wrapper p {
+    .menu-button-wrapper h5 {
       width: 65px;
       display: inline-block;
       font-size: 15px;
       padding: 28px 10px 28px 0vw;
       color: #FFD200;
       text-align: center;
-      line-height: 1.1;
       font-weight: 900;}
     /* Menu button image */
     .menu-button {
@@ -204,37 +212,35 @@ a.main-click, a.drop-click {
           transform: rotate(45deg) translate(-9px, -8px);
 }
 
+.page-content-wrapper {
+  margin: 20px 0;
+}
+
+/* Body Content Wrapper */
+.body-wrapper {
+  padding: 0% 5%; }
+  .body-wrapper h6 {
+    margin-bottom: 35px;
+    line-height: 1.38;
+}
+
 /* Columns */
 .columns {
   display: block;
   overflow: auto;
-  padding: 2.5% 5%; }
+  padding-top: 2.5%;
+  padding-bottom: 2.5%; }
   .column {
     height: 100%;
     width: 50%;
+    font-weight: 500;
+    text-align: center;
     display: block;
     float: left; }
     .column .text-container {
       margin: 0 5%; }
-    .column .text-container h1 {
-      font-size: 36px;
-      text-align: center;
-      line-height: 1.1;
-      font-weight: 500;
-      color: #000000; }
-    .column .text-container .bar {
-      height: 5px;
-      width: 100px;
-      margin: auto;
-      margin-top: 10px !important;
-      background: #000000; }
-    .column .text-container p {
-      margin-top: 10px;
-      font-size: 18px;
-      text-align: center;
-      line-height: 1.1;
-      font-weight: 500;
-      color: #000000; }
+    .column .text-container h3 {
+      margin-top: 10px; }
     .column .text-container a {
       margin: auto;
       margin-top: 10px;
@@ -243,10 +249,8 @@ a.main-click, a.drop-click {
       height: 20px;
       width: 180px;
       display: block;
-      color: #000000;
       font-size: 20px;
       letter-spacing: 0.1vw;
-      text-align: center;
       text-transform: uppercase;
       line-height: 1.1;
       font-weight: 900;
@@ -268,19 +272,11 @@ a.main-click, a.drop-click {
   margin: 5% 0;
   display: block; }
   .hero-grid .title {
-    font-size: 36px;
     text-align: center;
     line-height: 1.1;
-    font-weight: 500;
-    color: #000000;
   }
-  .hero-grid .bar {
-    height: 5px;
-    width: 100px;
-    margin: auto;
-    margin-top: 10px !important;
+  .hero-grid .horizontal-bar {
     margin-bottom: 20px !important;
-    background: #000000;
   }
   .hero-grid .img-cont-hero {
     width: 50%;
@@ -288,7 +284,7 @@ a.main-click, a.drop-click {
     display: inline-block;
     overflow: hidden;
     position: relative; }
-    @media screen and (max-width: 740px) {
+    @media screen and (max-width: 748px) {
         .hero-grid .img-cont-hero {
           width: 100%;
           height: calc(200%/3);
@@ -327,6 +323,13 @@ a.main-click, a.drop-click {
           -webkit-transition: all 0.3s ease-in-out;
 }
 
+.horizontal-bar {
+  height: 5px;
+  width: 100px;
+  margin: auto;
+  margin-top: 10px !important;
+}
+
 /* Footer */
   /* Overall footer wrapper */
 .footer-custom {
@@ -351,15 +354,13 @@ a.main-click, a.drop-click {
 
   padding: 15px;
   float: left;
-
+  font-weight: 600;
   display: inline-block;
   text-align: center; }
     /* Column title text */
-  .footer-column h1 {
+  .footer-column h2 {
     font-size: 22px;
-    font-weight: 600;
     text-transform: uppercase;
-    text-align: center;
   }
     /* Column clickable links */
   .footer-column a {
@@ -379,8 +380,6 @@ a.main-click, a.drop-click {
       width: 25%; }
     /* Column link text */
     .footer-column a h2 {
-      font-size: 14px;
-      font-weight: 600;
       text-transform: uppercase;
 }
 .footer-social {
@@ -403,15 +402,13 @@ a.main-click, a.drop-click {
   display: block;
   overflow: auto;
   margin: auto;
+  text-align: center;
   margin-top: 20px;
   padding: 10px;
   width: 340px;
   border: 2px;
   border-style: solid;
-  border-color: #FFD200;}
-  .footer-disclaimer p {
-  font-size: 15px;
-  text-align: center;
+  border-color: #FFD200;
 }
   /* Change footer settings when viewport width <= 894px */
 @media screen and (max-width: 894px) {
@@ -442,7 +439,7 @@ a.main-click, a.drop-click {
   .footer-disclaimer {
     width: 310px;
   }
-  .footer-disclaimer p {
+  .footer-disclaimer h5 {
     font-size: 13px;
   }
 }
@@ -482,12 +479,34 @@ header.at-title {
 
 
 /* HELPERS */
-
+  /* FONT WEIGHT/SIZE/HEIGHT */
+.wt-500 {
+  font-weight: 500 !important;
+}
+.wt-600 {
+  font-weight: 600 !important;
+}
+.wt-700 {
+  font-weight: 700 !important;
+}
+.wt-800 {
+  font-weight: 800 !important;
+}
+.wt-900 {
+  font-weight: 900 !important;
+}
+  /* COLOR */
+.bg-is-black {
+  background: #000000 !important;
+}
 .bg-is-dark-red {
   background: #84152D !important;
 }
 .bg-is-yellow {
   background: #FFD200 !important;
+}
+.font-is-black {
+  color: #000000 !important;
 }
 .font-is-dark-red {
   color: #84152D !important;
