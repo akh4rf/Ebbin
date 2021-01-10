@@ -256,7 +256,7 @@ a.main-click, a.drop-click {
       height: auto;
       width: 95%;
       margin: 2.5%; }
-    @media screen and (max-width: 740px) {
+    @media screen and (max-width: 748px) {
       .column {
         width: 100%; }
         .column .text-container {
