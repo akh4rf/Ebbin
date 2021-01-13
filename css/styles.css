@@ -25,9 +25,23 @@ nav {
 a {
   /* Turn cursor into pointer */
   cursor: pointer;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
-h1, h2, h3, h4, h5, h6, p {font-weight: inherit; line-height: 1.1;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: inherit;
+  line-height: 1.1;
+  text-transform: inherit;
+  text-align: inherit;
+}
 
 h1 {font-size: 36px;}
 h2 {font-size: 24px;}
@@ -43,11 +57,7 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
     padding: 0;
 }
 
-/* IMG Tag nested in .image class div */
-.image img {
-    display: block;
-    width: 100%;
-}
+img {width: 100%;}
 
 *, *::before, *::after {
     box-sizing: inherit;
@@ -58,13 +68,6 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
 /* OBJECT CLASSES */
 
 /* Top Navbar */
-  /* Overall navbar wrapper */
-.navbar-custom {
-  height: 71px;
-  width: 100%;
-
-  background: #84152D !important;
-}
   /* Section of the navbar where 1/2 of buttons go */
 .navbar-buttons {
   height: 100%;
@@ -104,11 +107,10 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
   display: inline-block;
   position: relative; }
   /* Nav dropdowns hidden by default */
-  .nav-btn-main ul {
-    display: none; }
+  .nav-btn-main ul {display: none;}
   @media screen and (max-width: 894px) {
-      .nav-btn-main {
-        width: 100%; }}
+    .nav-btn-main {width: 100%;}
+  }
   /* Nav dropdowns shown when hovered over */
   @media screen and (min-width: 895px) {
     .nav-btn-main:hover ul {
@@ -130,7 +132,6 @@ a.main-click, a.drop-click {
   letter-spacing: 0.1vw;
   text-align: center;
   text-transform: uppercase;
-  text-decoration: none;
   line-height: 1.1;
   font-weight: 900;
 
@@ -226,21 +227,12 @@ a.main-click, a.drop-click {
 
 /* Columns */
 .columns {
-  display: block;
   overflow: auto;
-  padding-top: 20px;
-  padding-bottom: 20px; }
+  padding: 20px 0; }
   .column {
-    height: 100%;
-    width: 50%;
-    font-weight: 500;
-    text-align: center;
-    display: block;
     float: left; }
     .column .text-container {
       margin: 0 5%; }
-    .column .text-container h3 {
-      margin-top: 10px; }
     .column .text-container a {
       margin: auto;
       margin-top: 10px;
@@ -251,76 +243,57 @@ a.main-click, a.drop-click {
       display: block;
       font-size: 20px;
       letter-spacing: 0.1vw;
-      text-transform: uppercase;
-      line-height: 1.1;
       font-weight: 900;
     }
-    .column .text-container a:hover {}
     .column img {
       height: auto;
       width: 95%;
       margin: 2.5%; }
     @media screen and (max-width: 748px) {
       .column {
-        width: 100%; }
+        width: 100% !important; }
         .column .text-container {
           margin: 5% 5% !important; }
 }
 
 /* Photo Grid */
-.hero-grid {
-  margin: 5% 0;
-  display: block; }
-  .hero-grid .title {
-    text-align: center;
-    line-height: 1.1;
-  }
-  .hero-grid .horizontal-bar {
-    margin-bottom: 20px !important;
-  }
-  .hero-grid .img-cont-hero {
+#hero-grid-section a {
     width: 50%;
     height: calc(100%/3);
     display: inline-block;
     overflow: hidden;
-    position: relative; }
+    position: relative;
+    z-index: 1; }
     @media screen and (max-width: 748px) {
-        .hero-grid .img-cont-hero {
-          width: 100%;
-          height: calc(200%/3);
-        }
+      #hero-grid-section a {
+        width: 100%;
+        height: calc(200%/3);
+      }
     }
-    .hero-grid .img-cont-hero a {
-      z-index: 1;
-    }
-      .hero-grid .img-cont-hero a .txt-cont-hero {
+      #hero-grid-section a .txt-cont-hero {
         width: 90%;
         position: absolute;
-        text-align: center;
         font-size: 5vw;
         color: #FFFFFF;
-        font-weight: 700;
-        float: left;
         z-index: 2;
       }
-      .hero-grid .img-cont-hero a .img-overlay {
+      #hero-grid-section a .img-overlay {
         height: 100%;
         width: 100%;
         position: absolute;
-        display: block;
         opacity: 0.2;
         z-index: 1;
       }
       @media screen and (max-width: 740px) {
-          .hero-grid .img-cont-hero a .txt-cont-hero {
-            font-size: 10vw; }}
-        .hero-grid .img-cont-hero a img {
-          width: 100%;
-          height: auto;
-          z-index: 0; }
-        .hero-grid .img-cont-hero a:hover img {
-          -webkit-transform: scale(1.1);
-          -webkit-transition: all 0.3s ease-in-out;
+          #hero-grid-section a .txt-cont-hero {
+            font-size: 10vw; }
+          }
+      #hero-grid-section a img {
+        width: 100%;
+        z-index: 0; }
+      #hero-grid-section a:hover img {
+        -webkit-transform: scale(1.1);
+        -webkit-transition: all 0.3s ease-in-out;
 }
 
 .horizontal-bar {
@@ -328,92 +301,27 @@ a.main-click, a.drop-click {
   width: 100px;
   margin: auto;
   margin-top: 10px !important;
+  margin-bottom: 10px !important;
 }
 
 /* Footer */
-  /* Overall footer wrapper */
-.footer-custom {
-  width: 100%;
-  display: inline-block;
-  overflow: auto;
-  padding-bottom: 36px;
-
-  background: #84152D !important;
-  color: #FFD200;
-}
-  /* Footer content wrapper */
-.footer-content {
-  width: 100%;
-  display: inline-block;
-  overflow: auto;
-  padding: 36px 50px 0px 50px;
-}
   /* Nav columns within footer */
-.footer-column {
-  width: 25%;
-
-  padding: 15px;
-  float: left;
-  font-weight: 600;
+.footer-column {display: inline-block;}
+  /* Column title text */
+.footer-column h2 {font-size: 22px;}
+  /* Column clickable links */
+.footer-column a {
+  margin-block-start: 14px;
   display: inline-block;
-  text-align: center; }
-    /* Column title text */
-  .footer-column h2 {
-    font-size: 22px;
-    text-transform: uppercase;
-  }
-    /* Column clickable links */
-  .footer-column a {
-    height: 14px;
-    width: 100%;
+}
+#footer-nav a:hover {color: #FFFFFF;}
+  /* Legislation column links */
+#footer-legis a {width: 25%;}
 
-    text-transform: uppercase;
-    margin-block-start: 14px;
-    display: inline-block;
-    text-decoration: none;
-    color: #FFD200; }
-    .footer-column a:hover {
-      color: #FFFFFF;
-    }
-    /* Legislation column links */
-    #footer-legis.footer-column a {
-      width: 25%; }
-    /* Column link text */
-    .footer-column a h2 {
-      text-transform: uppercase;
-}
-.footer-social {
-  width: 210px;
-  display: block;
-  overflow: auto;
-  margin: auto;
-  padding-top: 20px; }
-  .footer-social a {
-    width: 50px;
-    margin: 0px 10px;
-    font-size: 50px;
-    color: #FFD200;
-  }
-  .footer-social a:hover {
-    color: #FFFFFF;
-}
-
-.footer-disclaimer {
-  display: block;
-  overflow: auto;
-  margin: auto;
-  text-align: center;
-  margin-top: 20px;
-  padding: 10px;
-  width: 340px;
-  border: 2px;
-  border-style: solid;
-  border-color: #FFD200;
-}
   /* Change footer settings when viewport width <= 894px */
-@media screen and (max-width: 894px) {
-  .footer-column {
-    width: 100%;
+@media screen and (min-width: 768px) and (max-width: 894px) {
+  #footer-legis {
+    width: 100% !important;
   }
   #footer-legis a {
     width: 10% !important;
@@ -437,7 +345,7 @@ a.main-click, a.drop-click {
     width: 100% !important;
   }
   .footer-disclaimer {
-    width: 310px;
+    width: 300px;
   }
   .footer-disclaimer h5 {
     font-size: 13px;
@@ -479,6 +387,78 @@ header.at-title {
 
 
 /* HELPERS */
+  /* DIV WIDTH */
+.is-full-width {
+  width: 100%;
+}
+.is-half-width {
+  width: 50%;
+}
+.is-two-third-width {
+  width: calc(200%/3);
+}
+.is-one-third-width {
+  width: calc(100%/3);
+}
+.is-three-quarter-width {
+  width: 75%;
+}
+.is-one-quarter-width {
+  width: 25%;
+}
+.is-four-fifth-width {
+  width: 80%;
+}
+.is-three-fifth-width {
+  width: 60%;
+}
+.is-two-fifth-width {
+  width: 40%;
+}
+.is-one-fifth-width {
+  width: 20%;
+}
+.is-five-sixth-width {
+  width: calc(500%/6);
+}
+.is-one-sixth-width {
+  width: calc(100%/6);
+}
+  /* DIV ALIGN */
+.float-l {
+  float: left !important;
+}
+.float-c {
+  margin: auto !important;
+}
+.float-r {
+  float: right !important;
+}
+  /* DIV MARGINS */
+.mt-20 {
+  margin-top: 20px !important;
+}
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+  /* DIV PADDINGS */
+.pad-10 {
+  padding: 10px !important;
+}
+.pad-15 {
+  padding: 15px !important;
+}
+.pt-20 {
+  padding-top: 20px !important;
+}
+  /* DIV OVERFLOW */
+.overflow-auto {
+  overflow: auto !important;
+}
+  /* DIV DISPLAY */
+.display-ib {
+  display: inline-block !important;
+}
   /* FONT WEIGHT/SIZE/HEIGHT */
 .wt-500 {
   font-weight: 500 !important;
@@ -494,6 +474,12 @@ header.at-title {
 }
 .wt-900 {
   font-weight: 900 !important;
+}
+.font-50 {
+  font-size: 50px !important;
+}
+.upper {
+  text-transform: uppercase !important;
 }
   /* COLOR */
 .bg-is-black {
