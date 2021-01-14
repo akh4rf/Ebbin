@@ -20,7 +20,7 @@
   <meta property="og:url" content="http://www.adamebbin.com/" />
   <meta property="og:title" content="Ebbin for Virginia" />
 
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="../js/script.js"></script>
@@ -38,8 +38,8 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="navbar-custom">
-    <div class="navbar-logo wt-900">
+  <nav class="is-full-width bg-is-dark-red" style="height: 71px;">
+    <div class="navbar-logo wt-900 font-is-yellow">
       <h5>LOGO HERE</h5>
     </div>
     <div class="menu-button-wrapper" onclick="menuBtnFunc(this)">
@@ -52,7 +52,7 @@
         </div>
       </div>
     </div>
-    <ul class="navbar-buttons" id="nav-btn-l">
+    <ul class="navbar-buttons">
       <li id="aboutMenu" class="nav-btn-main" onclick="dropBtnFuncMobile(this)"><a class="main-click">About</a>
         <ul>
           <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/about-adam">About Adam</a></li>
@@ -92,10 +92,12 @@
   </nav>
 
   <div class="page-content-wrapper">
-    <div class="body-wrapper">
+    <div class="body-wrapper inline-img-parent">
       <h1 style="padding-top: 20px;">ABOUT ADAM</h1>
       <div class="horizontal-bar bg-is-black" style="margin: 20px 0px !important;"></div>
-      <div><img style="width: 300px; height: 375px; float: right; margin: 0px 0px 20px 20px;" src="../images/AdamInChamber.jpg" alt=""></div>
+      <div>
+        <img class="inline-img" style="width: 300px; height: 375px; float: right; margin: 0px 0px 20px 20px; border-width: 2px; border-style: solid;" src="../images/AdamInChamber.jpg" alt="">
+      </div>
       <h6>
         Virginia Senator Adam P. Ebbin took office in 2012 after serving for eight years in the House of Delegates.
         As a leader in the General Assembly, Adam has fought to advance progressive priorities, including preventing
@@ -128,7 +130,7 @@
         marijuana (SB 2; 2020) and to allow employees to sue employers for stealing their earned wages (SB 838; 2020).
       </h6>
       <div>
-        <img style="width: 432px; height: 270px; float: left; margin: 0px 20px 20px 0px;" src="../images/AdamTalking.jpg" alt="">
+        <img class="inline-img" style="width: 432px; height: 270px; float: left; margin: 0px 20px 20px 0px; border-width: 2px; border-style: solid;" src="../images/AdamTalking.jpg" alt="">
       </div>
       <h6>
         Adam has worked inside and outside the legislative process to ensure progressive change in Virginia. He founded the Virginia
@@ -172,35 +174,35 @@
   </div>
 
   <script>
-    resizeTextMarginTop();
+    shrinkInlineImgs();
     var winWidth = $("body").prop("clientWidth");
     if (winWidth >= 726) {var imgIsBefore = true; flipColumnOrder();}
     else {var imgIsBefore = false;}
   </script>
 
   <!-- Footer -->
-  <footer class="footer-custom">
-    <div class="footer-content">
+  <footer id="footer" class="bg-is-dark-red font-is-yellow is-full-width overflow-auto" style="padding-bottom: 20px; text-align: center;">
+    <div id="footer-nav" class="is-full-width upper overflow-auto" style="padding: 36px 50px 0px 50px;">
       <div class="form-container">
         <div class="ngp-form" data-id="6478709538949169152" data-endpoint="https://api.myngp.com" data-labels="inline" data-databag="everybody"></div>
       </div>
-      <div id="footer-about" class="footer-column">
+      <div id="footer-about" class="footer-column is-one-quarter-width float-l wt-600 pad-15">
         <u><h2>About</h2></u>
         <a href="http://www.adamebbin.com/about-adam"><h6>About Adam</h6></a>
         <a href="http://www.adamebbin.com/about-30th-district"><h6>About District 30</h6></a>
       </div>
-      <div id="footer-info" class="footer-column">
+      <div id="footer-info" class="footer-column is-one-quarter-width float-l wt-600 pad-15">
         <u><h2>Info</h2></u>
         <a href="http://www.adamebbin.com/updates-30th"><h6>Updates</h6></a>
         <a href="http://www.adamebbin.com/COVID19"><h6>COVID-19</h6></a>
       </div>
-      <div id="footer-news" class="footer-column">
+      <div id="footer-news" class="footer-column is-one-quarter-width float-l wt-600 pad-15">
         <u><h2>News</h2></u>
         <a href="http://www.adamebbin.com/senator-ebbins-2020-legislative-reports"><h6>Legislative Reports</h6></a>
         <a href="http://www.adamebbin.com/news-clips"><h6>News Clips</h6></a>
         <a href="http://www.adamebbin.com/press-releases"><h6>Press Releases</h6></a>
       </div>
-      <div id="footer-legis" class="footer-column">
+      <div id="footer-legis" class="footer-column is-one-quarter-width float-l wt-600 pad-15">
         <u><h2>Legislation</h2></u>
         <a href="http://www.adamebbin.com/2021-legislation"><h6>2021</h6></a>
         <a href="http://www.adamebbin.com/2020-legislation"><h6>2020</h6></a>
@@ -213,17 +215,18 @@
         <a href="http://www.adamebbin.com/2013-legislation"><h6>2013</h6></a>
         <a href="http://www.adamebbin.com/2012-legislation"><h6>2012</h6></a>
       </div>
-      <div class="footer-social">
-        <a class="fa fa-instagram" aria-hidden="true"></a>
-        <a class="fa fa-twitter" aria-hidden="true"></a>
-        <a class="fa fa-facebook" aria-hidden="true"></a>
+      <div id="footer-social" class="float-c overflow-auto pt-20" style="width: 210px;">
+        <a class="fa fa-instagram font-50" aria-hidden="true" style="width: 50px; margin: 0px 10px;"></a>
+        <a class="fa fa-twitter font-50" aria-hidden="true" style="width: 50px; margin: 0px 10px;"></a>
+        <a class="fa fa-facebook font-50" aria-hidden="true" style="width: 50px; margin: 0px 10px;"></a>
       </div>
     </div>
-    <div class="footer-disclaimer">
-      <h5>Paid for and authorized by Ebbin for Virginia</h5>
-      <h5>PO Box 26415, Alexandria, VA 22313</h5>
+    <div id="footer-disclaimer" class="float-c mt-20" style="width: 300px; padding: 10px 0; border-style: solid; border-color: #FFD200;">
+      <h6>Paid for and authorized by Ebbin for Virginia</h6>
+      <h6>PO Box 26415, Alexandria, VA 22313</h6>
     </div>
   </footer>
+  <div class="bg-is-dark-red"><div class="poweredby">Powered by <a href="http://www.ngpvan.com/?utm_source=Ebbin for Virginia&utm_medium=poweredby&utm_campaign=accelerator">NGP VAN</a></div></div>
 
 </body>
 

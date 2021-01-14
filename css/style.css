@@ -90,9 +90,7 @@ img {width: 100%;}
   font-size: 15px;
   text-align: center;
   line-height: 1.1;
-
-  background: #84152D !important;
-  color: #FFD200 !important; }
+}
   @media screen and (max-width: 894px) {
     .navbar-logo {
       padding: 28px 0vw 28px 20px !important;
@@ -243,17 +241,19 @@ a.main-click, a.drop-click {
       display: block;
       font-size: 20px;
       letter-spacing: 0.1vw;
-      font-weight: 900;
     }
-    .column img {
-      height: auto;
-      width: 95%;
-      margin: 2.5%; }
     @media screen and (max-width: 748px) {
       .column {
         width: 100% !important; }
         .column .text-container {
           margin: 5% 5% !important; }
+}
+
+.inline-img-small {
+  margin: auto !important;
+  margin-bottom: 20px !important;
+  width: 100% !important;
+  height: auto !important;
 }
 
 /* Photo Grid */
@@ -369,6 +369,14 @@ header.at-title {
 .at-form-submit .at-submit {
   width: 97px !important;
   float: none !important;
+}
+
+.poweredby {
+  font-size: 10px !important;
+  width: 140px !important;
+  height: 28px !important;
+  padding: 5px 10px !important;
+  margin: auto !important;
 }
 
 /* SPECIFIC OBJECTS */

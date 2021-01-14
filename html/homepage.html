@@ -20,7 +20,7 @@
   <meta property="og:url" content="http://www.adamebbin.com/" />
   <meta property="og:title" content="Ebbin for Virginia" />
 
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="../js/script.js"></script>
@@ -38,8 +38,8 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="is-full-width" style="height: 71px;">
-    <div class="navbar-logo wt-900">
+  <nav class="is-full-width bg-is-dark-red" style="height: 71px;">
+    <div class="navbar-logo wt-900 font-is-yellow">
       <h5>LOGO HERE</h5>
     </div>
     <div class="menu-button-wrapper" onclick="menuBtnFunc(this)">
@@ -52,7 +52,7 @@
         </div>
       </div>
     </div>
-    <ul class="navbar-buttons" id="nav-btn-l">
+    <ul class="navbar-buttons">
       <li id="aboutMenu" class="nav-btn-main" onclick="dropBtnFuncMobile(this)"><a class="main-click">About</a>
         <ul>
           <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/about-adam">About Adam</a></li>
@@ -96,14 +96,16 @@
     <!-- Body Section 1 -->
     <div class="body-wrapper">
       <!-- About Adam -->
-      <div id="main-col-1" class="columns wt-500" style="text-align: center;">
+      <div id="main-col-1" class="columns vc-anchor wt-500" style="text-align: center;">
         <div id="img-cont-1" class="column is-half-width">
           <div class="bg-is-dark-red">
-            <img src="../images/EbbinSquare.jpg" alt="Adam Ebbin smiling at camera">
+            <div class="vc-target" style="height: auto; width: 100%; padding: 2.5%;">
+              <img src="../images/EbbinSquare.jpg" alt="Adam Ebbin smiling at camera">
+            </div>
           </div>
         </div>
         <div id="txt-cont-1" class="column is-half-width">
-          <div id="main-txt-1" class="text-container">
+          <div id="main-txt-1" class="text-container center-text-vert">
             <h1>ABOUT ADAM</h1>
             <div class="horizontal-bar bg-is-black"></div>
             <h3>A native of Commack, New York, Adam has resided in Alexandria since 1989,
@@ -111,7 +113,7 @@
               As a leader in the General Assembly, Adam has fought to advance
               progressive priorities, including preventing gun violence, making
               it easier to vote, and fighting for equality for all Virginians.</h3>
-              <a class="font-is-black" href=""><u>LEARN MORE →</u></a>
+              <a class="font-is-black wt-900" href=""><u>LEARN MORE →</u></a>
           </div>
         </div>
       </div>
@@ -121,74 +123,78 @@
     <div id="hero-grid-section" class="hero-grid wt-700" style="margin: 5% 0; text-align: center;">
       <div class="title"><h1 class="wt-500">PRIORITIES</h1></div>
       <div class="horizontal-bar bg-is-black mb-20"></div>
-      <a id="img-cont-4" href="">
-        <div id="main-txt-4" style="text-shadow: .4vw .4vw #007A75;" class="txt-cont-hero">
+      <a id="img-cont-4" class="vc-anchor" href="">
+        <div id="main-txt-4" class="center-text-vert txt-cont-hero" style="text-shadow: .4vw .4vw #007A75;">
           LGBTQ+ RIGHTS
         </div>
         <div style="background: #00AD95" class="img-overlay"></div>
-        <img src="../images/EbbinVVA.jpeg" alt="Adam speaking at an event for the Virginia Values Act">
+        <img class="vc-target" src="../images/EbbinVVA.jpeg" alt="Adam speaking at an event for the Virginia Values Act">
       </a>
-      <a id="img-cont-5" href="">
-        <div id="main-txt-5" style="text-shadow: .4vw .4vw #8B004E;" class="txt-cont-hero">
+      <a id="img-cont-5" class="vc-anchor" href="">
+        <div id="main-txt-5" class="center-text-vert txt-cont-hero" style="text-shadow: .4vw .4vw #8B004E;">
           ECONOMY
         </div>
         <div style="background: #BC0061" class="img-overlay"></div>
-        <img src="../images/OldTown.jpg" alt="A view of King Street in Old Town, Alexandria at sunset">
+        <img class="vc-target" src="../images/OldTown.jpg" alt="A view of King Street in Old Town, Alexandria at sunset">
       </a>
-      <a id="img-cont-6" href="">
-        <div id="main-txt-6" style="text-shadow: .4vw .4vw #AF9200;" class="txt-cont-hero">
+      <a id="img-cont-6" class="vc-anchor" href="">
+        <div id="main-txt-6" class="center-text-vert txt-cont-hero" style="text-shadow: .4vw .4vw #AF9200;">
           ENVIRONMENT
         </div>
         <div style="background: #F3F300" class="img-overlay"></div>
-        <img src="../images/Parkway.jpg" alt="An image of a bright red-orange tree on the George Washington Memorial Parkway">
+        <img class="vc-target" src="../images/Parkway.jpg" alt="An image of a bright red-orange tree on the George Washington Memorial Parkway">
       </a>
-      <a id="img-cont-7" href="">
-        <div id="main-txt-7" style="text-shadow: .4vw .4vw #7A009D;" class="txt-cont-hero">
+      <a id="img-cont-7" class="vc-anchor" href="">
+        <div id="main-txt-7" class="center-text-vert txt-cont-hero" style="text-shadow: .4vw .4vw #7A009D;">
           GUN REFORM
         </div>
         <div style="background: #AA00D6" class="img-overlay"></div>
-        <img src="../images/GunReform.jpg" alt="Adam speaking at an event for gun reform">
+        <img class="vc-target" src="../images/GunReform.jpg" alt="Adam speaking at an event for gun reform">
       </a>
     </div>
 
     <!-- Body Section 2 -->
     <div class="body-wrapper">
       <!-- Progressive Champion -->
-      <div class="columns wt-500" style="text-align: center;">
+      <div class="columns vc-anchor wt-500" style="text-align: center;">
         <div id="img-cont-2" class="column is-half-width">
           <div class="bg-is-dark-red">
-            <img src="../images/EbbinSquare2.jpg" alt="Adam Ebbin speaking into microphone">
+            <div class="vc-target" style="height: auto; width: 100%; padding: 2.5%;">
+              <img src="../images/EbbinSquare2.jpg" alt="Adam Ebbin speaking into microphone">
+            </div>
           </div>
         </div>
         <div id="txt-cont-2" class="column is-half-width">
-          <div id="main-txt-2" class="text-container">
+          <div id="main-txt-2" class="text-container center-text-vert">
             <h1>PROGRESSIVE CHAMPION</h1>
             <div class="horizontal-bar bg-is-black"></div>
             <h3>During his time in the General Assembly, Adam has passed numerous pieces of landmark
             legislation, banning discrimination in employment, housing, and public accommodations
             on the basis of sexual orientation or gender identity, decriminalizing marijuana, and creating
             a Public Defender office in Arlington County.</h3>
-            <a class="font-is-black" href=""><u>LEARN MORE →</u></a>
+            <a class="font-is-black wt-900" href=""><u>LEARN MORE →</u></a>
           </div>
         </div>
       </div>
 
       <!-- Fighting For The 30th -->
-      <div id="main-col-3" class="columns wt-500" style="text-align: center;">
+      <div id="main-col-3" class="columns vc-anchor wt-500" style="text-align: center;">
         <div id="img-cont-3" class="column is-half-width">
           <div class="bg-is-dark-red">
-            <img src="../images/District30.png" alt="A map of District 30">
+            <div class="vc-target" style="height: auto; width: 100%; padding: 2.5%;">
+              <img src="../images/District30.png" alt="A map of District 30">
+            </div>
           </div>
         </div>
         <div id="txt-cont-3" class="column is-half-width">
-          <div id="main-txt-3" class="text-container">
+          <div id="main-txt-3" class="text-container center-text-vert">
             <h1>FIGHTING FOR THE 30TH</h1>
             <div class="horizontal-bar bg-is-black"></div>
             <h3>Adam represents the 30th Senate District, consisting of approximately 200,000 residents
               who reside in portions of Arlington, Alexandria, and parts of Fairfax County’s Mount Vernon
               and Lee Districts. The district borders the Potomac River and includes Reagan National Airport,
               Old Town Alexandria and George Washington’s Mount Vernon Estate.</h3>
-              <a class="font-is-black" href=""><u>LEARN MORE →</u></a>
+              <a class="font-is-black wt-900" href=""><u>LEARN MORE →</u></a>
           </div>
         </div>
       </div>
@@ -196,14 +202,14 @@
   </div>
 
   <script>
-    resizeTextMarginTop();
+    centerDivVert();
     var winWidth = $("body").prop("clientWidth");
     if (winWidth >= 726) {var imgIsBefore = true; flipColumnOrder();}
     else {var imgIsBefore = false;}
   </script>
 
   <!-- Footer -->
-  <footer id="footer" class="bg-is-dark-red font-is-yellow is-full-width overflow-auto" style="padding-bottom: 36px; text-align: center;">
+  <footer id="footer" class="bg-is-dark-red font-is-yellow is-full-width overflow-auto" style="padding-bottom: 20px; text-align: center;">
     <div id="footer-nav" class="is-full-width upper overflow-auto" style="padding: 36px 50px 0px 50px;">
       <div class="form-container">
         <div class="ngp-form" data-id="6478709538949169152" data-endpoint="https://api.myngp.com" data-labels="inline" data-databag="everybody"></div>
@@ -243,11 +249,13 @@
         <a class="fa fa-facebook font-50" aria-hidden="true" style="width: 50px; margin: 0px 10px;"></a>
       </div>
     </div>
-    <div id="footer-disclaimer" class="float-c mt-20 pad-10 overflow-auto" style="width: 340px; border-style: solid; border-color: #FFD200;">
-      <h5>Paid for and authorized by Ebbin for Virginia</h5>
-      <h5>PO Box 26415, Alexandria, VA 22313</h5>
+    <div id="footer-disclaimer" class="float-c mt-20" style="width: 300px; padding: 10px 0; border-style: solid; border-color: #FFD200;">
+      <h6>Paid for and authorized by Ebbin for Virginia</h6>
+      <h6>PO Box 26415, Alexandria, VA 22313</h6>
     </div>
   </footer>
+  <div class="bg-is-dark-red"><div class="poweredby">Powered by <a href="http://www.ngpvan.com/?utm_source=Ebbin for Virginia&utm_medium=poweredby&utm_campaign=accelerator">NGP VAN</a></div></div>
+
 
 </body>
 

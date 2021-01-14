@@ -35,8 +35,9 @@ function dropBtnFuncMobile(x) {
 // Resize Function //
 function resizeFunction() {
   closeMenuIfBig();
-  resizeTextMarginTop();
+  centerDivVert();
   flipColumnOrder();
+  shrinkInlineImgs();
 }
 
 // Closes the navigation dropdown if viewport gets too wide //
@@ -51,21 +52,19 @@ function closeMenuIfBig() {
   }
 }
 
-// Resizes first body div's textbox margin-top //
-function resizeTextMarginTop() {
-  for (var i = 1; i < 8; i++) {
-    var txtdiv = document.getElementById("main-txt-"+i),
-        style1 = window.getComputedStyle(txtdiv),
-        height1 = style1.getPropertyValue('height');
-    var imgdiv = document.getElementById("img-cont-"+i),
-        style2 = window.getComputedStyle(imgdiv),
-        height2 = style2.getPropertyValue('height');
-    var newMargin = (parseFloat(height2) - parseFloat(height1))/2;
-    var currentMargin = txtdiv.style.margin.split("");
-    txtdiv.style.margin = (newMargin+"px 5% 0px");
+// Vertically centers div in relation to another (larger) div //
+// Requires mutual parent to have class .vc-anchor and target //
+// div to have class .vc-target                               //
+function centerDivVert() {
+  var textBoxList = document.getElementsByClassName("center-text-vert");
+  for (let textBox of textBoxList) {
+    var image = ($(textBox).closest('.vc-anchor').find('.vc-target'))[0],
+        tHeight = (window.getComputedStyle(textBox)).getPropertyValue('height'),
+        iHeight = (window.getComputedStyle(image)).getPropertyValue('height'),
+        newMargin = (parseFloat(iHeight) - parseFloat(tHeight))/2;
+    textBox.style.margin = (newMargin+"px 5% 0px");
   }
 }
-
 
 function flipColumnOrder() {
   var winWidth = $("body").prop("clientWidth"),
@@ -81,5 +80,24 @@ function flipColumnOrder() {
       jQuery(jQuery("#img-cont-"+num).detach()).appendTo("#main-col-"+num);
     }
     imgIsBefore = false;
+  }
+}
+
+function shrinkInlineImgs() {
+  var imgList = document.getElementsByClassName("inline-img");
+  for (let img of imgList) {
+    var isSmall = $(img).hasClass("inline-img-small"),
+        parent = ($(img).closest('.inline-img-parent'))[0],
+        iWidth = parseFloat(img.style.width),
+        pStyle = window.getComputedStyle(parent),
+        pWidth = (parseFloat(pStyle.getPropertyValue('width'))
+               - (parseFloat(pStyle.getPropertyValue('padding-left'))
+               + parseFloat(pStyle.getPropertyValue('padding-right'))));
+    if (iWidth >= pWidth && !isSmall) {
+      img.classList.toggle("inline-img-small");
+    }
+    else if (iWidth < pWidth && isSmall) {
+      img.classList.toggle("inline-img-small");
+    }
   }
 }
