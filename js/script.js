@@ -66,6 +66,9 @@ function centerDivVert() {
   }
 }
 
+// Flips order of image/text columns when screen is narrow    //
+// enough, such that images remain above text in narrow view  //
+// no matter the actual div order.                            //
 function flipColumnOrder() {
   var winWidth = $("body").prop("clientWidth"),
       list = [1,3];
@@ -83,6 +86,10 @@ function flipColumnOrder() {
   }
 }
 
+// Centers & shrinks inline images that grow wider than their //
+// containing divs, while maintaining the same aspect ratio.  //
+// Requires img to have class "inline-img" and requires       //
+// container to have class "inline-img-parent".               //
 function shrinkInlineImgs() {
   var imgList = document.getElementsByClassName("inline-img");
   for (let img of imgList) {
