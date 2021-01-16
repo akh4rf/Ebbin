@@ -71,16 +71,18 @@ function centerDivVert() {
 // no matter the actual div order.                            //
 function flipColumnOrder() {
   var winWidth = $("body").prop("clientWidth"),
-      list = [1,3];
+      flipList = document.getElementsByClassName("flippable");
   if ((winWidth < 734) && !imgIsBefore) {
-    for (let num of list) {
-      jQuery(jQuery("#txt-cont-"+num).detach()).appendTo("#main-col-"+num);
+    for (let item of flipList) {
+      var txt = ($(item).find('.flip-txt'))[0];
+      $(txt).detach().appendTo(item);
     }
     imgIsBefore = true;
   }
   else if ((winWidth >= 734) && imgIsBefore) {
-    for (let num of list) {
-      jQuery(jQuery("#img-cont-"+num).detach()).appendTo("#main-col-"+num);
+    for (let item of flipList) {
+      var img = ($(item).find('.flip-img'))[0];
+      $(img).detach().appendTo(item);
     }
     imgIsBefore = false;
   }

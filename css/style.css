@@ -89,8 +89,7 @@ img {width: 100%;}
 
   font-size: 15px;
   text-align: center;
-  line-height: 1.1;
-}
+  line-height: 1.1; }
   @media screen and (max-width: 894px) {
     .navbar-logo {
       padding: 28px 0vw 28px 20px !important;
@@ -249,53 +248,45 @@ a.main-click, a.drop-click {
           margin: 5% 5% !important; }
 }
 
+/* Images */
+  /* Inline images too wide for screen get shrunken */
 .inline-img-small {
   margin: auto !important;
   margin-bottom: 20px !important;
   width: 100% !important;
   height: auto !important;
 }
-
-/* Photo Grid */
-#hero-grid-section a {
-    width: 50%;
-    height: calc(100%/3);
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    z-index: 1; }
-    @media screen and (max-width: 748px) {
-      #hero-grid-section a {
-        width: 100%;
-        height: calc(200%/3);
-      }
-    }
-      #hero-grid-section a .txt-cont-hero {
-        width: 90%;
-        position: absolute;
-        font-size: 5vw;
-        color: #FFFFFF;
-        z-index: 2;
-      }
-      #hero-grid-section a .img-overlay {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        opacity: 0.2;
-        z-index: 1;
-      }
-      @media screen and (max-width: 740px) {
-          #hero-grid-section a .txt-cont-hero {
-            font-size: 10vw; }
-          }
-      #hero-grid-section a img {
-        width: 100%;
-        z-index: 0; }
-      #hero-grid-section a:hover img {
-        -webkit-transform: scale(1.1);
-        -webkit-transition: all 0.3s ease-in-out;
+  /* Image zoom effect on hover */
+a.img-hover-zoom {
+  overflow: hidden; }
+  a.img-hover-zoom:hover img {
+    -webkit-transform: scale(1.1);
+    -webkit-transition: all 0.3s ease-in-out;
+}
+  /* Images with color and/or text overlay */
+.img-with-overlay {
+  z-index: 1; }
+  .img-with-overlay > .overlay-txt {
+    width: 90%;
+    position: absolute;
+    z-index: 2; }
+  .img-with-overlay > .overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.2;
+    z-index: 1;
 }
 
+/* Grid */
+.grid > a,
+.grid > div,
+.grid > img {
+  display: inline-block;
+  position: relative;
+}
+
+/* Horizontal Bar */
 .horizontal-bar {
   height: 5px;
   width: 100px;
@@ -305,15 +296,8 @@ a.main-click, a.drop-click {
 }
 
 /* Footer */
-  /* Nav columns within footer */
-.footer-column {display: inline-block;}
-  /* Column title text */
-.footer-column h2 {font-size: 22px;}
   /* Column clickable links */
-.footer-column a {
-  margin-block-start: 14px;
-  display: inline-block;
-}
+.footer-column a {margin-block-start: 14px;}
 #footer-nav a:hover {color: #FFFFFF;}
   /* Legislation column links */
 #footer-legis a {width: 25%;}
@@ -507,4 +491,7 @@ header.at-title {
 }
 .font-is-yellow {
   color: #FFD200 !important;
+}
+.font-is-white {
+  color: #FFFFFF;
 }
