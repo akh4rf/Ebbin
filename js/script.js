@@ -36,8 +36,10 @@ function dropBtnFuncMobile(x) {
 function resizeFunction() {
   closeMenuIfBig();
   centerDivVert();
-  flipColumnOrder();
   shrinkInlineImgs();
+  if ((document.getElementsByClassName("flippable")).length > 0) {
+    flipColumnOrder();
+  }
 }
 
 // Closes the navigation dropdown if viewport gets too wide //
@@ -68,7 +70,9 @@ function centerDivVert() {
 
 // Flips order of image/text columns when screen is narrow    //
 // enough, such that images remain above text in narrow view  //
-// no matter the actual div order.                            //
+// no matter the actual div order. Requires mutual parent to  //
+// have class .flippable and for children to have classes     //
+// .flip-img and .flip-txt respectively.                      //
 function flipColumnOrder() {
   var winWidth = $("body").prop("clientWidth"),
       flipList = document.getElementsByClassName("flippable");
