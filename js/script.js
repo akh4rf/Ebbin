@@ -68,27 +68,39 @@ function centerDivVert() {
   }
 }
 
-// Flips order of image/text columns when screen is narrow    //
-// enough, such that images remain above text in narrow view  //
-// no matter the actual div order. Requires mutual parent to  //
-// have class .flippable and for children to have classes     //
-// .flip-img and .flip-txt respectively.                      //
+// Reorders .column divs depending on whether the body                //
+// width is above or below a certain value (flipWidth).               //
+// Parent .columns div must have class .flippable, a given            //
+// value for flipWidth, with its flipBool value set to false.         //
+// First child .column div must have class .flip-l2r.is-half-width,   //
+// Second child .column div must have class .flip-r2l.is-half-width   //
+// Example:                                                           //
+//  <div flipWidth="734" flipBool="false" class="columns flippable">  //
+//    <div class="column flip-l2r is-half-width">...</div>            //
+//    <div class="column flip-r2l is-half-width">...</div>            //
+//  </div>                                                            //
 function flipColumnOrder() {
   var winWidth = $("body").prop("clientWidth"),
       flipList = document.getElementsByClassName("flippable");
-  if ((winWidth < 734) && !imgIsBefore) {
-    for (let item of flipList) {
-      var txt = ($(item).find('.flip-txt'))[0];
+  for (let item of flipList) {
+    /*
+      var num       : width at which columns flip
+      var bool_val  : true if unflipped, false if flipped.
+    */
+    var num = parseInt(item.getAttribute("flipWidth")),
+        bool_val = item.getAttribute("flipBool") == "true";
+    /* Unflip when body width falls under designated flipWidth */
+    if ((winWidth < num) && !bool_val) {
+      var txt = ($(item).find('.flip-r2l'))[0];
       $(txt).detach().appendTo(item);
+      $(item).attr("flipBool","true");
     }
-    imgIsBefore = true;
-  }
-  else if ((winWidth >= 734) && imgIsBefore) {
-    for (let item of flipList) {
-      var img = ($(item).find('.flip-img'))[0];
+    /* Flip when body width rises above designated flipWidth */
+    else if ((winWidth >= num) && bool_val) {
+      var img = ($(item).find('.flip-l2r'))[0];
       $(img).detach().appendTo(item);
+      $(item).attr("flipBool","false")
     }
-    imgIsBefore = false;
   }
 }
 
