@@ -72,7 +72,7 @@ img {width: 100%;}
 .navbar-buttons {
   width: 80%;
   float: left; }
-  @media screen and (max-width: 894px) {
+  @media screen and (max-width: 909px) {
   .navbar-buttons {
     width: 100%;
     display: none; }}
@@ -89,14 +89,9 @@ img {width: 100%;}
 
   font-size: 15px;
   text-align: center;
-  line-height: 1.1; }
-  @media screen and (max-width: 894px) {
-    .navbar-logo {
-      padding: 28px 0vw 28px 20px !important;
-      width: 40%;
-      text-align: left !important;
-    }
+  line-height: 1.1;
 }
+
   /* Navbar Buttons */
 .nav-btn-main {
   height: 100%;
@@ -105,11 +100,11 @@ img {width: 100%;}
   position: relative; }
   /* Nav dropdowns hidden by default */
   .nav-btn-main ul {display: none;}
-  @media screen and (max-width: 894px) {
+  @media screen and (max-width: 909px) {
     .nav-btn-main {width: 100%;}
   }
   /* Nav dropdowns shown when hovered over */
-  @media screen and (min-width: 895px) {
+  @media screen and (min-width: 910px) {
     .nav-btn-main:hover ul {
       width: 100%;
 
@@ -137,12 +132,39 @@ a.main-click, a.drop-click {
   color: #FFD200;
 
   display: inline-block;}
-  a.drop-click {
-    background: #691024 !important;
+a.drop-click {background: #691024 !important;}
+a.main-click {font-size: 25px;padding: 23px 1vw;line-height: 1;}
+  a.main-click * {display: inline-block;}
+  a.main-click h5 {
+    padding: 5px 0;
+    font-size: 15px;line-height: 1;vertical-align: top;
+  }
+  li.nav-btn-main .fa-angle-right {
+    margin-left: 5px;
+    line-height: 1;
+    vertical-align: top;
+    -moz-transition: all .25s linear;
+    -webkit-transition: all .25s linear;
+    transition: all .25s linear;
+  }
+@media screen and (min-width: 910px) {
+  .nav-btn-main:hover .fa-angle-right {
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
 }
+.rotated-arrow {
+  -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
   /* Changes color of buttons when hovered over */
-.nav-btn-main:hover a.main-click,
-.nav-btn-drop:hover a.drop-click {
+a.main-click:hover,
+a.drop-click:hover {
   background: #FFD200 !important;
   color: #84152D !important;
 }
@@ -176,7 +198,7 @@ a.main-click, a.drop-click {
   position: relative;
   float: right;
   cursor: pointer; }
-  @media screen and (max-width: 894px) {
+  @media screen and (max-width: 909px) {
     .menu-button-wrapper {
       display: inline-block; }}
   #menu-wrapper {width: 100px; margin-right: 20px; float: right;}
@@ -303,8 +325,8 @@ a.img-hover-zoom {
   /* Legislation column links */
 #footer-legis a {width: 25%;}
 
-  /* Change footer settings when viewport width <= 894px */
-@media screen and (min-width: 768px) and (max-width: 894px) {
+  /* Change footer settings when viewport width <= 909px */
+@media screen and (min-width: 768px) and (max-width: 909px) {
   #footer-legis {
     width: 100% !important;
   }
@@ -366,7 +388,7 @@ header.at-title {
 
 /* SPECIFIC OBJECTS */
 
-@media screen and (min-width: 895px){
+@media screen and (min-width: 910px){
   /* Makes legislation navbar dropdown twice as wide */
   #years {
     width: 200%;

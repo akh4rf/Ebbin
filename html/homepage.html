@@ -53,26 +53,26 @@
       </div>
     </div>
     <ul class="navbar-buttons">
-      <li id="aboutMenu" class="nav-btn-main" onclick="dropBtnFuncMobile(this)"><a class="main-click">About</a>
+      <li id="aboutMenu" class="nav-btn-main" onclick="dropBtnFuncMobile(this)"><a class="main-click"><h5>About</h5><div style="width: 25px; height: 25px;"><i class="fa fa-angle-right wt-900"></i></div></a>
         <ul>
           <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/about-adam">About Adam</a></li>
           <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/about-30th-district">About District 30</a></li>
         </ul>
       </li>
-      <li id="infoMenu" class="nav-btn-main" onclick="dropBtnFuncMobile(this)"><a class="main-click">Info</a>
+      <li id="infoMenu" class="nav-btn-main" onclick="dropBtnFuncMobile(this)"><a class="main-click"><h5>Info</h5><div style="width: 25px; height: 25px;"><i class="fa fa-angle-right wt-900"></i></div></a>
         <ul>
           <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/updates-30th">Updates</a></li>
           <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/COVID19">COVID-19</a></li>
         </ul>
       </li>
-      <li id="newsMenu" class="nav-btn-main" onclick="dropBtnFuncMobile(this)"><a class="main-click">News</a>
+      <li id="newsMenu" class="nav-btn-main" onclick="dropBtnFuncMobile(this)"><a class="main-click"><h5>News</h5><div style="width: 25px; height: 25px;"><i class="fa fa-angle-right wt-900"></i></div></a>
         <ul>
           <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/senator-ebbins-2020-legislative-reports">Legislative Reports</a></li>
           <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/news-clips">News Clips</a></li>
           <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/press-releases">Press Releases</a></li>
         </ul>
       </li>
-      <li id="legisMenu" class="nav-btn-main" onclick="dropBtnFuncMobile(this)"><a class="main-click">Legislation</a>
+      <li id="legisMenu" class="nav-btn-main" onclick="dropBtnFuncMobile(this)"><a class="main-click"><h5>Bills</h5><div style="width: 25px; height: 25px;"><i class="fa fa-angle-right wt-900"></i></div></a>
         <ul id="years">
           <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/2021-legislation">2021</a></li>
           <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/2020-legislation">2020</a></li>
@@ -86,8 +86,8 @@
           <li class="nav-btn-drop"><a class="drop-click" href="http://www.adamebbin.com/2012-legislation">2012</a></li>
         </ul>
       </li>
-      <li class="nav-btn-main"><a class="main-click" href="http://www.adamebbin.com/contact-adam">Contact</a></li>
-      <li class="nav-btn-main"><a class="main-click" href="http://www.adamebbin.com/contribute">Contribute</a></li>
+      <li class="nav-btn-main"><a class="main-click" href="http://www.adamebbin.com/contact-adam"><h5>Contact</h5></a></li>
+      <li class="nav-btn-main"><a class="main-click" href="http://www.adamebbin.com/contribute"><h5>Contribute</h5></a></li>
     </ul>
   </nav>
 
@@ -96,15 +96,15 @@
     <!-- Body Section 1 -->
     <div class="body-wrapper">
       <!-- About Adam -->
-      <div id="main-col-1" class="columns flippable vc-anchor wt-500" style="text-align: center;">
-        <div id="img-cont-1" class="column flip-img is-half-width">
+      <div id="main-col-1" flipWidth="734" flipBool="false" class="columns flippable vc-anchor wt-500" style="text-align: center;">
+        <div id="img-cont-1" class="column flip-l2r is-half-width">
           <div class="bg-is-dark-red">
             <div class="vc-target" style="height: auto; width: 100%; padding: 2.5%;">
               <img src="../images/EbbinSquare.jpg" alt="Adam Ebbin smiling at camera">
             </div>
           </div>
         </div>
-        <div id="txt-cont-1" class="column flip-txt is-half-width">
+        <div id="txt-cont-1" class="column flip-r2l is-half-width">
           <div id="main-txt-1" class="text-container center-text-vert">
             <h1>ABOUT ADAM</h1>
             <div class="horizontal-bar bg-is-black"></div>
@@ -180,15 +180,15 @@
       </div>
 
       <!-- Fighting For The 30th -->
-      <div id="main-col-3" class="columns flippable vc-anchor wt-500" style="text-align: center;">
-        <div id="img-cont-3" class="column flip-img is-half-width">
+      <div id="main-col-3" flipWidth="734" flipBool="false" class="columns flippable vc-anchor wt-500" style="text-align: center;">
+        <div id="img-cont-3" class="column flip-l2r is-half-width">
           <div class="bg-is-dark-red">
             <div class="vc-target" style="height: auto; width: 100%; padding: 2.5%;">
               <img src="../images/District30.png" alt="A map of District 30">
             </div>
           </div>
         </div>
-        <div id="txt-cont-3" class="column flip-txt is-half-width">
+        <div id="txt-cont-3" class="column flip-r2l is-half-width">
           <div id="main-txt-3" class="text-container center-text-vert">
             <h1>FIGHTING FOR THE 30TH</h1>
             <div class="horizontal-bar bg-is-black"></div>
@@ -212,9 +212,24 @@
   </style>
   <script>
     centerDivVert();
-    var winWidth = $("body").prop("clientWidth");
-    if (winWidth >= 726) {var imgIsBefore = true; flipColumnOrder();}
-    else {var imgIsBefore = false;}
+    /* Initial flip of .flippable columns */
+    var winWidth = $("body").prop("clientWidth"),
+        flipList = document.getElementsByClassName("flippable");
+    for (let item of flipList) {
+      /*
+        var num       : width at which columns flip
+        var bool_val  : ideally, true if unflipped, false if flipped.
+                        however, in the event that columns begin
+                        unflipped and must be flipped, we need to mark
+                        them for an initial flip
+      */
+      var num = parseInt(item.getAttribute("flipWidth")),
+          bool_val = item.getAttribute("flipBool") == "true";
+      /* Mark columns that need to be flipped before page load */
+      if (winWidth >= num) {$(item).attr("flipBool","true");}
+    }
+    /* Initiate flip before page load */
+    flipColumnOrder();
   </script>
 
   <!-- Footer -->
@@ -241,7 +256,7 @@
           <a href="http://www.adamebbin.com/press-releases"><h6>Press Releases</h6></a>
         </div>
         <div id="footer-legis" class="grid footer-column is-one-quarter-width float-l wt-600 pad-15">
-          <u><h2>Legislation</h2></u>
+          <u><h2>Bills</h2></u>
           <a href="http://www.adamebbin.com/2021-legislation"><h6>2021</h6></a>
           <a href="http://www.adamebbin.com/2020-legislation"><h6>2020</h6></a>
           <a href="http://www.adamebbin.com/2019-legislation"><h6>2019</h6></a>

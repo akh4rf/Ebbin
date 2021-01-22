@@ -4,32 +4,38 @@ function menuBtnFunc(x) {
   // Toggles appearance of menu button //
   x.classList.toggle("change");
   // Toggles visibility of vertical navbar //
-  var y = document.getElementsByClassName("navbar-buttons");
-  for (let item of y) {
+  var navMenu = document.getElementsByClassName("navbar-buttons");
+  for (let item of navMenu) {
     item.classList.toggle("show-nav");
   }
   // Hides all dropdown navbar buttons //
-  var z = document.getElementsByClassName("show-drop");
-  for (let item of z) {
-    item.classList.toggle("show-drop");
+  var droppedList = document.getElementsByClassName("show-drop");
+  for (let item of droppedList) {
+    toggleNavDrop(item);
   }
 }
 
 // Governs the nested dropdown navigation for mobible users //
-function dropBtnFuncMobile(x) {
+function dropBtnFuncMobile(navBtn) {
   var winWidth = $("body").prop("clientWidth");
   // Check if current dropdown is already displayed //
-  var t = x.classList.contains("show-drop");
+  var isDisplayed = navBtn.classList.contains("show-drop");
   // Make sure other dropdowns are minimized //
-  var z = document.getElementsByClassName("show-drop");
-  for (let item of z) {
-    item.classList.toggle("show-drop");
+  var droppedList = document.getElementsByClassName("show-drop");
+  for (let item of droppedList) {
+    toggleNavDrop(item);
   }
   // Display dropdown navbar buttons if both    //
   // vw <= 894 AND it wasn't already displayed. //
-  if (winWidth <= 894 && !t) {
-    x.classList.toggle("show-drop");
+  if (winWidth <= 894 && !isDisplayed) {
+    toggleNavDrop(navBtn);
   }
+}
+
+// Toggles the appearance of the nested dropdown navigation //
+function toggleNavDrop(navBtn) {
+  navBtn.classList.toggle("show-drop");
+  (($(navBtn).find(".fa-angle-right"))[0]).classList.toggle("rotated-arrow");
 }
 
 // Resize Function //
