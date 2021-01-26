@@ -155,6 +155,7 @@ a.main-click {font-size: 25px;padding: 23px 1vw;line-height: 1;}
     transform: rotate(90deg);
   }
 }
+  /* Class for right arrow that has been rotated */
 .rotated-arrow {
   -ms-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
